@@ -17,6 +17,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -27,32 +30,36 @@
         </nav>
     </header>
 
-    <section>
-        <div>
+    <section class="content-center">
+        <div class="card content-container contact-form">
             <h2>Thank you for taking the Instruments of the Orchestra Quiz</h2>
             <p>
-                I hope you enjoyed this quiz and learning about the instruments in an orchestra. <br>
-                If there is anything you think could be improved or added to the quiz, please fill out the
-                form below. <br>
+                I hope you enjoyed this quiz and learning about the instruments in an orchestra.
+            </p>
+            <p>
+                If there is anything you think could be improved or added to the quiz, please fill out the form below.
+            </p>
+            <p>
                 I look forward to hearing from you!
             </p>
+
             <form>
                 <div class="form-group">
                     <label for="name">Full Name:</label>
                     <input type="text" class="form-control" name="full_name" id="name"
-                        placeholder="Please Enter Your Full Name..." required />
+                        placeholder="Enter Your Full Name" required />
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address:</label>
                     <input type="email" class="form-control" name="email_address" id="email"
-                        placeholder="Please Enter Your Email Address..." required />
+                        placeholder="Enter Your Email Address" required />
                 </div>
                 <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea class="form-control" name="message" id="message" placeholder="Type Your Message Here..."
+                    <textarea class="form-control" name="message" id="message" placeholder="Enter Your Message Here"
                         required></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" class="button submit-btn">Submit</button>
             </form>
         </div>
     </section>

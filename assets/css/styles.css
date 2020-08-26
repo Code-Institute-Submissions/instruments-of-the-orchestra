@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('/assets/images/music-notes-bg.jpg');
-    background-color: #264653;
+    background-color: var(--navy);
     /* fallback background color if image fails to load */
 
     font-family: 'ABeeZee', sans-serif;
@@ -14,12 +14,20 @@ body {
     height: 100vh;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 /* ---------- Color Variables ---------- */
 :root {
     --red: #F94144;
     /* Red Salsa */
     --dark-red: #F81215;
     /* Red */
+    --pink: #F67584;
+    /* Ultra Red */
+    --dark-pink: #F45265;
+    /* Radical Red */
     --orange: #FDA716;
     /* Orange Peel*/
     --dark-orange: #FD990D;
@@ -32,6 +40,10 @@ body {
     /*Pacific Blue */
     --dark-blue: #3897A8;
     /* Blue Munsell */
+    --navy: #264653;
+    /* Charcoal */
+    --dark-navy: #1A2F38;
+    /* Gunmetal */
 }
 
 /* ---------- End Color Variables ---------- */
@@ -40,23 +52,26 @@ body {
 .nav-icon {
     color: #fff;
     font-size: 2rem;
-    padding: 20px;
+    padding: 25px;
 }
 
 /* ---------- End Navigation Icons ---------- */
 
 
 /* ---------- Content Container ---------- */
-.content-container {
-    background-color: #fff;
-    border-radius: 20px;
-    margin: 20px;
-    padding: 20px;
-}
-
 .content-center {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.content-container {
+    background-color: #fff;
+    color: var(--dark-navy);
+    border-radius: 20px;
+    border: 5px solid var(--dark-navy);
+    box-shadow: 0 5px var(--dark-navy);
+    margin: 10px 20px;
+    padding: 30px;
 }
 
 /* ---------- End Content Container ---------- */
@@ -65,9 +80,9 @@ body {
 .button {
     width: 100%;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     border-radius: 10px;
     border: none;
 }
@@ -78,22 +93,28 @@ body {
 
 .answer-1 {
     background-color: var(--red);
-    box-shadow: 0 5px 0 var(--dark-red);
+    box-shadow: 0 5px var(--dark-red);
 }
 
 .answer-2 {
     background-color: var(--orange);
-    box-shadow: 0 5px 0 var(--dark-orange);
+    box-shadow: 0 5px var(--dark-orange);
 }
 
 .answer-3 {
     background-color: var(--green);
-    box-shadow: 0 5px 0 var(--dark-green);
+    box-shadow: 0 5px var(--dark-green);
 }
 
 .answer-4 {
     background-color: var(--blue);
-    box-shadow: 0 5px 0 var(--dark-blue);
+    box-shadow: 0 5px var(--dark-blue);
+}
+
+.submit-btn {
+    margin-top: 10px;
+    background-color: var(--pink);
+    box-shadow: 0 5px var(--dark-pink);
 }
 
 /* Code below is from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3 
@@ -120,7 +141,38 @@ to add a simple button animation */
     background-color: var(--dark-blue);
 }
 
+.submit-btn:hover {
+    background-color: var(--dark-pink);
+}
+
 /* ---------- End Buttons ---------- */
+
+/* ---------- Contact Form ---------- */
+.contact-form p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+.form-group input {
+    height: 50px;
+}
+
+::placeholder {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ---------- End Contact Form ---------- */
 
 /* ---------- Footer ---------- */
 .site-owner {
