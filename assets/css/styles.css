@@ -14,8 +14,16 @@ body {
     height: 100vh;
 }
 
+h1 {
+    font-size: 2.4rem;
+}
+
 h2 {
     font-size: 2rem;
+}
+
+.hide-content {
+    display: none;
 }
 
 /* ---------- Color Variables ---------- */
@@ -32,6 +40,10 @@ h2 {
     /* Orange Peel*/
     --dark-orange: #FD990D;
     /* Yellow Orange Color Wheel */
+    --yellow: #F9C74F;
+    /* Maize Crayola */
+    --dark-yellow: #F7B926;
+    /* Selective Yellow */
     --green: #7DBE5B;
     /* Mantis */
     --dark-green: #6BAF46;
@@ -74,6 +86,11 @@ h2 {
     padding: 30px;
 }
 
+.content-container p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
 /* ---------- End Content Container ---------- */
 
 /* ---------- Buttons ---------- */
@@ -111,7 +128,13 @@ h2 {
     box-shadow: 0 5px var(--dark-blue);
 }
 
-.submit-btn {
+.start-button {
+    margin-top: 10px;
+    background-color: var(--yellow);
+    box-shadow: 0 5px var(--dark-yellow);
+}
+
+.submit-button {
     margin-top: 10px;
     background-color: var(--pink);
     box-shadow: 0 5px var(--dark-pink);
@@ -141,7 +164,11 @@ to add a simple button animation */
     background-color: var(--dark-blue);
 }
 
-.submit-btn:hover {
+.start-button:hover {
+    background-color: var(--dark-yellow);
+}
+
+.submit-button:hover {
     background-color: var(--dark-pink);
 }
 
