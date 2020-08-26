@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/images/music-notes-bg.jpg');
+    background-color: #264653;
+    /* fallback background color if image fails to load */
+
+    font-family: 'ABeeZee', sans-serif;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+/* ---------- Navigation Icons ---------- */
+.nav-icon {
+    color: #fff;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+/* ---------- End Navigation Icons ---------- */
+
+/* ---------- Content Container ---------- */
+.content-container {
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.content-center {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* ---------- End Content Container ---------- */
+
+/* ---------- Footer ---------- */
+.site-owner {
+    color: #fff;
+}
+
+/* ---------- End Footer ---------- */
