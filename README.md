@@ -78,9 +78,9 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 
 | Mobile | Tablet | Desktop |
 | :----: | :----: | :-----: |
-| Home Page| Home Page | Home Page |
-| Quiz Examples| Quiz Examples | Quiz Examples |
-| Contact Form | Contact Form | Contact Form|
+| [Home Page](https://github.com/KirstChat/instruments-of-the-orchestra/blob/master/assets/wireframes/home-mobile.pdf) | [Home Page](https://github.com/KirstChat/instruments-of-the-orchestra/blob/master/assets/wireframes/home-tablet.pdf) | [Home Page](https://github.com/KirstChat/instruments-of-the-orchestra/blob/master/assets/wireframes/home-desktop.pdf) |
+| [Quiz Examples](https://github.com/KirstChat/instruments-of-the-orchestra/blob/master/assets/wireframes/quiz-examples-mobile.pdf) | [Quiz Examples](https://github.com/KirstChat/instruments-of-the-orchestra/blob/master/assets/wireframes/quiz-examples-tablet.pdf) | [Quiz Examples](https://github.com/KirstChat/instruments-of-the-orchestra/blob/master/assets/wireframes/quiz-examples-desktop.pdf) |
+| [Contact Form](https://github.com/KirstChat/instruments-of-the-orchestra/blob/master/assets/wireframes/contact-form-mobile.pdf) | [Contact Form](https://github.com/KirstChat/instruments-of-the-orchestra/blob/master/assets/wireframes/contact-form-tablet.pdf) | [Contact Form](https://github.com/KirstChat/instruments-of-the-orchestra/blob/master/assets/wireframes/contact-form-desktop.pdf) |
 
 [Contents](#contents)
 
