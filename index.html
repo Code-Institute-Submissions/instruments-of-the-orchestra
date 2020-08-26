@@ -30,17 +30,38 @@
         </nav>
     </header>
 
+
     <section class="content-center">
         <div class="card content-container">
-            <h2>Question</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <button class="button answer-1">Answer</button>
-                    <button class="button answer-2">Answer</button>
-                </div>
-                <div class="col-lg-6">
-                    <button class="button answer-3">Answer</button>
-                    <button class="button answer-4">Answer</button>
+            <div id="welcome-container">
+                <h1>Welcome to Instruments of the Orchestra</h1>
+                <p>
+                    A quiz that will teach you about the different instruments played in an orchestra.
+                </p>
+                <p>
+                    Not sure what an orchestra is? Press the question button on the top of the screen to find out more
+                    before
+                    you start.
+                </p>
+                <p>
+                    When you’re ready, press the button below to start the quiz.
+                </p>
+                <p>
+                    Good luck!
+                </p>
+                <button id="start-quiz" class="button start-button">Start</button>
+            </div>
+            <div id="quiz-container" class="hide-content">
+                <h2>Question</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <button class="button answer-1">Answer</button>
+                        <button class="button answer-2">Answer</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <button class="button answer-3">Answer</button>
+                        <button class="button answer-4">Answer</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,6 +93,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
