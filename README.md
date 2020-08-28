@@ -120,9 +120,9 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 - [Font Awesome](https://fontawesome.com/)
   - Font Awesome was used to add icons for
 - [Git](https://git-scm.com/)
-  - Git was used for version control by utilising the GitPod terminal to commit to Git and push to GitHub.
+  - Git was used for version control by utilising the terminal in VS Code to commit to Git and push to GitHub.
 - [GitHub](https://github.com/)
-  - GitHub was used to store the project code that was pushed from GitPod.
+  - GitHub was used to store the project code that was pushed from VS Code.
 - [VS Code](https://code.visualstudio.com/)
   - Visual Studio Code was the IDE used to code the project.
 - [Balsamiq](https://balsamiq.com/)
@@ -182,6 +182,10 @@ git clone
 ## Credits
 
 ### Code
+
+[Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s)
+[W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3) - Button animation
+[](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/)
 
 ### Content
 
