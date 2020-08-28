@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/assets/images/music-notes-bg.jpg');
+    background-image: url('../images/music-notes-bg.jpg');
     background-color: var(--navy);
     /* fallback background color if image fails to load */
 
@@ -14,6 +14,11 @@ body {
     height: 100vh;
 }
 
+.hide-content {
+    display: none;
+}
+
+/* ---------- Headings ---------- */
 h1 {
     font-size: 2.4rem;
 }
@@ -22,9 +27,7 @@ h2 {
     font-size: 2rem;
 }
 
-.hide-content {
-    display: none;
-}
+/* ---------- End Headings ---------- */
 
 /* ---------- Color Variables ---------- */
 :root {
