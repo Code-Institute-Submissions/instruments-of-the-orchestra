@@ -1,5 +1,4 @@
 const startButton = document.getElementById('start-quiz');
-const nextButton = document.getElementById('');
 const welcomeContainer = document.getElementById('welcome-container');
 const quizContainer = document.getElementById('quiz-container');
 const questionText = document.getElementById('question-text');
@@ -10,31 +9,39 @@ let randomQuestion, currentQuestion;
 //When the start button is clicked the startQuiz function is executed
 startButton.addEventListener('click', startQuiz);
 
-//This function adds and removes a css class that hides the welcome card and displays the quiz
-//This function also sets the randomQuestion variable to a random number and sets the currentQuestion index to 0 
+//This function will hide the welcome card and display the quiz when executed
 function startQuiz() {
     welcomeContainer.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
-    randomQuestion = questions.sort(() => Math.random() - .5);
-    currentQuestion = 0;
     nextQuestion();
 }
 
-//This function calls the displayQuestion function and displays the questions in a random order
+//The code below is from the Web Dev Simplified YouTube video Build a Quiz App with JavaScript - https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s
+//This will display the questions in a random order
 function nextQuestion() {
+    randomQuestion = questions.sort(() => Math.random() - .5);
+    currentQuestion = 0;
     displayQuestion(randomQuestion[currentQuestion]);
 }
 
 function displayQuestion(question) {
-    questionText.innerText = question.question; //sets question text in HTML
+    //Set the question text for the h2 element in index.html
+    questionText.innerText = question.question;
     const answers = question.answers.map(answer => answer.text);
-    for (let i = 0; i < answerButton.length; i++) { //pushes answer array into each button
+    //Loop through answer buttons and add the answer array items to the text
+    for (let i = 0; i < answerButton.length; i++) {
         answerButton[i].innerText = answers[i];
     }
+    //Add an event listener to all answer buttons that will run the selectAnswer function when clicked
+    const buttons = document.querySelectorAll('.answer-button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => selectAnswer());
+    });
 }
 
 function selectAnswer() {
-
+    const correctAnswer = questions.answers;
+    console.log(correctAnswer);
 }
 
 //Quiz Questions
