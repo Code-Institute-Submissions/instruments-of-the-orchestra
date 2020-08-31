@@ -21,6 +21,7 @@ body {
 /* ---------- Headings ---------- */
 h1 {
     font-size: 2.4rem;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -33,7 +34,7 @@ h2 {
 :root {
     --red: #F94144;
     /* Red Salsa */
-    --dark-red: #F81215;
+    --dark-red: #ED070B;
     /* Red */
     --pink: #F67584;
     /* Ultra Red */
@@ -41,8 +42,8 @@ h2 {
     /* Radical Red */
     --orange: #FDA716;
     /* Orange Peel*/
-    --dark-orange: #FD990D;
-    /* Yellow Orange Color Wheel */
+    --dark-orange: #F28E02;
+    /* Carrot Orange*/
     --yellow: #F9C74F;
     /* Maize Crayola */
     --dark-yellow: #F7B926;
@@ -92,6 +93,12 @@ h2 {
 .content-container p {
     font-size: 1.2rem;
     margin-top: 10px;
+}
+
+.content-container img {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 20px;
 }
 
 /* ---------- End Content Container ---------- */
@@ -191,10 +198,12 @@ to add a simple button animation */
 .form-group textarea {
     height: 150px;
     resize: none;
+    text-align: center;
 }
 
 .form-group input {
     height: 50px;
+    text-align: center;
 }
 
 ::placeholder {
