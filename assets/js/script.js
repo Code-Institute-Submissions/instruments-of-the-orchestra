@@ -3,14 +3,15 @@ const nextButton = document.getElementById('');
 const welcomeContainer = document.getElementById('welcome-container');
 const quizContainer = document.getElementById('quiz-container');
 const questionText = document.getElementById('question-text');
+const answerButton = document.getElementsByClassName('answer-button');
 
 let randomQuestion, currentQuestion;
 
 //When the start button is clicked the startQuiz function is executed
 startButton.addEventListener('click', startQuiz);
 
-//startQuiz function adds and removes a css class to hide and display different content
-//displays questions in a random order each time the quiz is played
+//This function adds and removes a css class that hides the welcome card and displays the quiz
+//This function also sets the randomQuestion variable to a random number and sets the currentQuestion index to 0 
 function startQuiz() {
     welcomeContainer.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
@@ -19,17 +20,17 @@ function startQuiz() {
     nextQuestion();
 }
 
+//This function calls the displayQuestion function and displays the questions in a random order
 function nextQuestion() {
     displayQuestion(randomQuestion[currentQuestion]);
 }
 
 function displayQuestion(question) {
     questionText.innerText = question.question; //sets question text in HTML
-    const answerButton = document.getElementsByClassName('answer-button');
-    for (let i = 0; i < answerButton.length; i++) {
-        console.log(answerButton.item(i));
+    const answers = question.answers.map(answer => answer.text);
+    for (let i = 0; i < answerButton.length; i++) { //pushes answer array into each button
+        answerButton[i].innerText = answers[i];
     }
-    question.answers.forEach(answer => console.log(answer.text)); //find a way to push individual elements into button
 }
 
 function selectAnswer() {
@@ -95,7 +96,7 @@ const questions = [{
                 correct: false
             },
             {
-                text: 'TheWoodwind family',
+                text: 'The Woodwind family',
                 correct: false
             }
         ]
