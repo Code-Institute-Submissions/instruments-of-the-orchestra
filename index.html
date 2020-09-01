@@ -29,16 +29,66 @@
     <header>
         <nav class="d-flex justify-content-between">
             <a href="index.html"><i class="nav-icon fas fa-home"></i></a>
-            <a href="#"><i class="nav-icon fas fa-question-circle"></i></a>
+            <a data-toggle="modal" data-target="#aboutModal" href="#"><i
+                    class="nav-icon fas fa-question-circle"></i></a>
         </nav>
     </header>
 
+    <section>
+        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2>What is an Orchestra?</h2>
+                        <img class="orchestra-img" src="assets/images/orchestra.jpg" alt="Orchestra">
+                        <p>
+                            An orchestra is a large group of musicians who play instruments together to make music.
+                        </p>
+                        <p>
+                            They play a lot of classical music as well music used in films, television shows and video
+                            games!
+                        </p>
+                        <p>
+                            The instruments in an orchestra are organised into four different families:
+                        </p>
+                        <img class="music-icon" src="assets/images/violin.png" alt="Violin">
+                        <p>
+                            The String Family
+                        </p>
+                        <img class="music-icon" src="assets/images/clarinet.png" alt="Clarinet">
+                        <p>
+                            The Woodwind Family
+                        </p>
+                        <img class="music-icon" src="assets/images/trumpet.png" alt="Trumpet">
+                        <p>
+                            The Brass Family
+                        </p>
+                        <img class="music-icon" src="assets/images/timpani.png" alt="Timpani">
+                        <p>
+                            The Percussion Family
+                        </p>
+                        <p>
+                            An orchestra can have between 30 and 100 musicians playing on stage at the same time -
+                            that’s a lot of musicians!
+                        </p>
+                        <img class="music-icon" src="assets/images/conductor.png" alt="Orchestra Conductor Baton">
+                        <p>
+                            So how do all the musicians play together? They are lead by ‘The Conductor’. It is the
+                            conductors job to tell the musicians when to start and stop playing, how fast or slow to
+                            play, and how loud or quiet to play.
+                        </p>
+                        <button type="button" class="button close-button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="content-center">
         <div class="card content-container">
             <div id="welcome-container">
                 <h1>Welcome to Instruments of the Orchestra</h1>
-                <img src="assets/images/orchestra.jpg" alt="Orchestra">
+                <img class="orchestra-img" src="assets/images/orchestra.jpg" alt="Orchestra">
                 <p>
                     A quiz that will teach you about the different instruments played in an orchestra.
                 </p>

@@ -7,6 +7,7 @@ body {
 
     font-family: 'ABeeZee', sans-serif;
     text-align: center;
+    color: var(--dark-navy);
 
     display: flex;
     flex-direction: column;
@@ -19,13 +20,10 @@ body {
 }
 
 /* ---------- Headings ---------- */
-h1 {
-    font-size: 2.4rem;
-    text-transform: uppercase;
-}
-
+h1,
 h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
+    text-transform: uppercase;
 }
 
 /* ---------- End Headings ---------- */
@@ -67,12 +65,33 @@ h2 {
 /* ---------- Navigation Icons ---------- */
 .nav-icon {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 25px;
 }
 
 /* ---------- End Navigation Icons ---------- */
 
+/* ---------- About Modal ---------- */
+.modal-content {
+    border: 5px solid var(--dark-navy);
+    border-radius: 20px;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.orchestra-img {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+.music-icon {
+    margin: 20px 0;
+}
+
+/* ---------- End About Modal ---------- */
 
 /* ---------- Content Container ---------- */
 .content-center {
@@ -82,7 +101,6 @@ h2 {
 
 .content-container {
     background-color: #fff;
-    color: var(--dark-navy);
     border-radius: 20px;
     border: 5px solid var(--dark-navy);
     box-shadow: 0 5px var(--dark-navy);
@@ -91,14 +109,8 @@ h2 {
 }
 
 .content-container p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 10px;
-}
-
-.content-container img {
-    width: 100%;
-    margin: 20px 0;
-    border-radius: 20px;
 }
 
 /* ---------- End Content Container ---------- */
@@ -109,7 +121,7 @@ h2 {
     padding: 20px;
     margin-top: 30px;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 10px;
     border: none;
 }
@@ -150,6 +162,12 @@ h2 {
     box-shadow: 0 5px var(--dark-pink);
 }
 
+.close-button {
+    margin-top: 10px;
+    background-color: var(--pink);
+    box-shadow: 0 5px var(--dark-pink);
+}
+
 /* Code below is from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3 
 to add a simple button animation */
 .button:hover {
@@ -182,16 +200,20 @@ to add a simple button animation */
     background-color: var(--dark-pink);
 }
 
+.close-button:hover {
+    background-color: var(--dark-pink);
+}
+
 /* ---------- End Buttons ---------- */
 
 /* ---------- Contact Form ---------- */
 .contact-form p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 10px;
 }
 
 .form-group label {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 10px;
 }
 
@@ -207,7 +229,7 @@ to add a simple button animation */
 }
 
 ::placeholder {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
@@ -216,6 +238,7 @@ to add a simple button animation */
 /* ---------- Footer ---------- */
 .site-owner {
     color: #fff;
+    font-size: 0.8rem;
 }
 
 /* ---------- End Footer ---------- */
