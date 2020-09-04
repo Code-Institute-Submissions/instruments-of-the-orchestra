@@ -113,6 +113,11 @@ h2 {
     margin-top: 10px;
 }
 
+#question-img {
+    width: 50%;
+    margin: 20px 0;
+}
+
 /* ---------- End Content Container ---------- */
 
 /* ---------- Buttons ---------- */

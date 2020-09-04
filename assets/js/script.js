@@ -2,6 +2,7 @@ const startButton = document.getElementById('start-quiz');
 const welcomeContainer = document.getElementById('welcome-container');
 const quizContainer = document.getElementById('quiz-container');
 const questionText = document.getElementById('question-text');
+const questionImage = document.getElementById('question-img');
 const answerButton = document.getElementsByClassName('answer-button');
 
 let randomQuestion, currentQuestion;
@@ -13,13 +14,13 @@ startButton.addEventListener('click', startQuiz);
 function startQuiz() {
     welcomeContainer.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
-    nextQuestion();
+    setQuestions();
 }
 
 //The code below is from the Web Dev Simplified YouTube video Build a Quiz App with JavaScript - https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s
 //This will display the questions in a random order
-function nextQuestion() {
-    randomQuestion = questions.sort(() => Math.random() - .5);
+function setQuestions() {
+    randomQuestion = questions.sort(() => Math.random() - 0.5);
     currentQuestion = 0;
     displayQuestion(randomQuestion[currentQuestion]);
 }
@@ -27,15 +28,16 @@ function nextQuestion() {
 function displayQuestion(question) {
     //Set the question text for the h2 element in index.html
     questionText.innerText = question.question;
+    questionImage.src = question.image;
     const answers = question.answers.map(answer => answer.text);
     //Loop through answer buttons and add the answer array items to the text
     for (let i = 0; i < answerButton.length; i++) {
         answerButton[i].innerText = answers[i];
     }
-    //Add an event listener to all answer buttons that will run the selectAnswer function when clicked
-    const buttons = document.querySelectorAll('.answer-button');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => selectAnswer());
+    //Add event listener to run a function when answer buttons are clicked
+    const answerButtons = document.querySelectorAll('.answer-button');
+    answerButtons.forEach(button => {
+        button.addEventListener('click', selectAnswer);
     });
 }
 
@@ -47,7 +49,7 @@ function selectAnswer() {
 //Quiz Questions
 const questions = [{
         question: 'Can you guess the name of this instrument?',
-        //Image
+        image: 'assets/images/violin.png',
         answers: [{
                 text: 'Clarinet',
                 correct: false
@@ -67,29 +69,8 @@ const questions = [{
         ],
     },
     {
-        question: 'Can you guess which instrument makes this sound?',
-        //Sound
-        answers: [{
-                text: 'Oboe',
-                correct: false
-            },
-            {
-                text: 'Clarinet',
-                correct: false
-            },
-            {
-                text: 'Trumpet',
-                correct: false
-            },
-            {
-                text: 'Bassoon',
-                correct: true
-            }
-        ],
-    },
-    {
         question: 'Can you guess which family this instrument belongs to?',
-        //Image
+        image: 'assets/images/trumpet.png',
         answers: [{
                 text: 'The Percussion Family',
                 correct: false
