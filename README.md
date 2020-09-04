@@ -184,8 +184,12 @@ git clone
 ### Code
 
 [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s)
+
 [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3) - Button animation
-[](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/)
+
+[Loops](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/)
+
+[Favicon](https://www.w3.org/2005/10/howto-favicon)
 
 ### Content
 
@@ -197,6 +201,9 @@ git clone
 Sound
 
 Images
+[Music vector created by macrovector - www.freepik.com](https://www.freepik.com/vectors/music)
+
+[Icons made by](https://www.flaticon.com/authors/freepik)
 
 ### Acknowledgements
 
