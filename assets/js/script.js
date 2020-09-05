@@ -4,6 +4,15 @@ const quizContainer = document.getElementById('quiz-container');
 const questionText = document.getElementById('question-text');
 const questionImage = document.getElementById('question-img');
 const answerButton = document.getElementsByClassName('answer-button');
+const nextButton = document.getElementById('next-button');
+const wellDone = document.getElementById('well-done');
+const tryAgain = document.getElementById('try-again');
+
+//Answer Buttons
+const answerA = document.getElementById('answer-a');
+const answerB = document.getElementById('answer-b');
+const answerC = document.getElementById('answer-c');
+const answerD = document.getElementById('answer-d');
 
 let randomQuestion, currentQuestion;
 
@@ -14,79 +23,70 @@ startButton.addEventListener('click', startQuiz);
 function startQuiz() {
     welcomeContainer.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
-    setQuestions();
+    getQuestions();
 }
 
 //The code below is from the Web Dev Simplified YouTube video Build a Quiz App with JavaScript - https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s
-//This will display the questions in a random order
-function setQuestions() {
+//This function will display the questions in a random order
+function getQuestions() {
     randomQuestion = questions.sort(() => Math.random() - 0.5);
     currentQuestion = 0;
-    displayQuestion(randomQuestion[currentQuestion]);
+    displayQuestions(randomQuestion[currentQuestion]);
 }
 
-function displayQuestion(question) {
-    //Set the question text for the h2 element in index.html
+//This function the questions and answers in the quiz container
+function displayQuestions(question) {
+    //Set the text of the question
     questionText.innerText = question.question;
+    //Set the image source
     questionImage.src = question.image;
-    const answers = question.answers.map(answer => answer.text);
-    //Loop through answer buttons and add the answer array items to the text
-    for (let i = 0; i < answerButton.length; i++) {
-        answerButton[i].innerText = answers[i];
-    }
-    //Add event listener to run a function when answer buttons are clicked
+    //Set the text of the answer buttons
+    answerA.innerText = question.a;
+    answerB.innerText = question.b;
+    answerC.innerText = question.c;
+    answerD.innerText = question.d;
+
     const answerButtons = document.querySelectorAll('.answer-button');
     answerButtons.forEach(button => {
-        button.addEventListener('click', selectAnswer);
+        button.addEventListener('click', () => {
+            const correctAnswer = question.correct;
+            if (button.innerText === correctAnswer) {
+                wellDone.classList.remove('hide-content'); //Show well done message
+                document.getElementById('message').innerText = question.message;
+                tryAgain.classList.add('hide-content');
+                quizContainer.classList.add('hide-content');
+            } else {
+                tryAgain.classList.remove('hide-content'); //Show try again message
+            };
+        });
     });
 }
 
-function selectAnswer() {
-    const correctAnswer = questions.answers;
-    console.log(correctAnswer);
-}
+nextButton.addEventListener('click', () => {
+    wellDone.classList.add('hide-content');
+    quizContainer.classList.remove('hide-content');
+    getQuestions();
+})
 
 //Quiz Questions
 const questions = [{
         question: 'Can you guess the name of this instrument?',
         image: 'assets/images/violin.png',
-        answers: [{
-                text: 'Clarinet',
-                correct: false
-            },
-            {
-                text: 'Cello',
-                correct: false
-            },
-            {
-                text: 'Violin',
-                correct: true
-            },
-            {
-                text: 'Flute',
-                correct: false
-            }
-        ],
+        a: 'Clarinet',
+        b: 'Cello',
+        c: 'Violin',
+        d: 'Flute',
+        correct: 'Violin',
+        message: 'It\’s a Violin! The Violin is part of the string family. It has four strings which can be plucked or bowed by the player to make a sound!'
     },
     {
         question: 'Can you guess which family this instrument belongs to?',
         image: 'assets/images/trumpet.png',
-        answers: [{
-                text: 'The Percussion Family',
-                correct: false
-            },
-            {
-                text: 'The Brass Family',
-                correct: true
-            },
-            {
-                text: 'The String Family',
-                correct: false
-            },
-            {
-                text: 'The Woodwind family',
-                correct: false
-            }
-        ]
+        a: 'The Percussion Family',
+        b: 'The Brass Family',
+        c: 'The String Family',
+        d: 'The Woodwind Family',
+        correct: 'The Brass Family',
+        message: 'It\'s a Trumpet!'
     }
 ]

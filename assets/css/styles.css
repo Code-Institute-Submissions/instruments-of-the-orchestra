@@ -135,22 +135,22 @@ h2 {
     outline: none;
 }
 
-.answer-1 {
+#answer-a {
     background-color: var(--red);
     box-shadow: 0 5px var(--dark-red);
 }
 
-.answer-2 {
+#answer-b {
     background-color: var(--orange);
     box-shadow: 0 5px var(--dark-orange);
 }
 
-.answer-3 {
+#answer-c {
     background-color: var(--green);
     box-shadow: 0 5px var(--dark-green);
 }
 
-.answer-4 {
+#answer-d {
     background-color: var(--blue);
     box-shadow: 0 5px var(--dark-blue);
 }
@@ -173,6 +173,11 @@ h2 {
     box-shadow: 0 5px var(--dark-pink);
 }
 
+#next-button {
+    background-color: var(--pink);
+    box-shadow: 0 5px var(--dark-pink);
+}
+
 /* Code below is from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3 
 to add a simple button animation */
 .button:hover {
@@ -181,19 +186,19 @@ to add a simple button animation */
 }
 
 /* Button Hover States */
-.answer-1:hover {
+#answer-a:hover {
     background-color: var(--dark-red);
 }
 
-.answer-2:hover {
+#answer-b:hover {
     background-color: var(--dark-orange);
 }
 
-.answer-3:hover {
+#answer-c:hover {
     background-color: var(--dark-green);
 }
 
-.answer-4:hover {
+#answer-d:hover {
     background-color: var(--dark-blue);
 }
 
@@ -206,6 +211,10 @@ to add a simple button animation */
 }
 
 .close-button:hover {
+    background-color: var(--dark-pink);
+}
+
+#next-button:hover {
     background-color: var(--dark-pink);
 }
 

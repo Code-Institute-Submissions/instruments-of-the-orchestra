@@ -110,17 +110,23 @@
                 <img id="question-img" src=" " alt=" ">
                 <div id="answer-buttons" class="row">
                     <div class="col-lg-6">
-                        <button class="button answer-button answer-1">Answer</button>
-                        <button class="button answer-button answer-2">Answer</button>
+                        <button id="answer-a" class="button answer-button">Answer</button>
+                        <button id="answer-b" class="button answer-button">Answer</button>
                     </div>
                     <div class="col-lg-6">
-                        <button class="button answer-button answer-3">Answer</button>
-                        <button class="button answer-button answer-4">Answer</button>
+                        <button id="answer-c" class="button answer-button">Answer</button>
+                        <button id="answer-d" class="button answer-button">Answer</button>
                     </div>
                 </div>
             </div>
-            <div id="well-done" class="hide-content"></div>
-            <div id="try-again" class="hide-content"></div>
+            <div id="well-done" class="hide-content">
+                <h2>Well Done!</h2>
+                <p id="message"></p>
+                <button id="next-button" class="button">Next Question</button>
+            </div>
+            <div id="try-again" class="hide-content">
+                <h2>Try Again!</h2>
+            </div>
         </div>
     </section>
 
