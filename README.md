@@ -93,10 +93,8 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 ### Features left to be implemented
 
 - Quiz
-- Feedback Form
-- Home Button
-- About the Orchestra Modal
-- Social Links in Footer
+- Feedback Form (add EmailJS)
+
 - Learning Section
 
 [Contents](#contents)
@@ -133,6 +131,8 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 ---
 
 ## Testing
+
+Created a branch to updated the text content of the answer buttons from the object array in a different wat. With the first version where I looped through the array to updated the text, I was unable to find a way to see if the button clicked was true or false.
 
 ### Testing User Stories from UX Section
 
@@ -190,6 +190,8 @@ git clone
 [Loops](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/)
 
 [Favicon](https://www.w3.org/2005/10/howto-favicon)
+
+[setTimeOut](https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay)
 
 ### Content
 
