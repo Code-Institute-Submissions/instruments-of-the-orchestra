@@ -19,7 +19,7 @@ let randomQuestion, currentQuestion;
 //When the start button is clicked the startQuiz function is executed
 startButton.addEventListener('click', startQuiz);
 
-//This function will hide the welcome card and display the quiz when executed
+//This function will hide the welcome card and display the quiz when the start button is clicked
 function startQuiz() {
     welcomeContainer.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
@@ -34,38 +34,54 @@ function getQuestions() {
     displayQuestions(randomQuestion[currentQuestion]);
 }
 
-//This function the questions and answers in the quiz container
+//This function displays the questions and answers in the quiz container
 function displayQuestions(question) {
-    //Set the text of the question
+    //Sets the text of the question
     questionText.innerText = question.question;
-    //Set the image source
+    //Sets the image source
     questionImage.src = question.image;
-    //Set the text of the answer buttons
+    //Sets the text of the answer buttons
     answerA.innerText = question.a;
     answerB.innerText = question.b;
     answerC.innerText = question.c;
     answerD.innerText = question.d;
 
+    //Adds a click event listener to each of the buttons which will display a message if the answer clicked is correct or incorrect
     const answerButtons = document.querySelectorAll('.answer-button');
     answerButtons.forEach(button => {
         button.addEventListener('click', () => {
             const correctAnswer = question.correct;
             if (button.innerText === correctAnswer) {
-                wellDone.classList.remove('hide-content'); //Show well done message
+                //If answer is correct this will display a well done message and hide all other content
+                wellDone.classList.remove('hide-content');
                 document.getElementById('message').innerText = question.message;
                 tryAgain.classList.add('hide-content');
                 quizContainer.classList.add('hide-content');
             } else {
-                tryAgain.classList.remove('hide-content'); //Show try again message
+                //If answer is incorrect this will display a try again message in place of the image
+                tryAgain.classList.remove('hide-content');
+                questionImage.classList.add('hide-content');
+                //Code below is from stack overflow - https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay
+                //This will display the try again message for 2 seconds before showing the image again
+                setTimeout(function () {
+                    tryAgain.classList.add('hide-content');
+                    questionImage.classList.remove('hide-content');
+                }, 2000);
             };
         });
     });
 }
 
+//Adds a click event listener to the next button which will display the next question
 nextButton.addEventListener('click', () => {
     wellDone.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
     getQuestions();
+    if (questions.length > currentQuestion) {
+        console.log('next');
+    } else {
+        quizContainer.classList.add('hide-content');
+    }
 })
 
 //Quiz Questions
