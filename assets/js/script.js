@@ -52,21 +52,25 @@ function displayQuestions(question) {
         button.addEventListener('click', () => {
             const correctAnswer = question.correct;
             if (button.innerText === correctAnswer) {
+                //Correct audio will play
+                correctSound();
                 //If answer is correct this will display a well done message and hide all other content
                 wellDone.classList.remove('hide-content');
                 document.getElementById('message').innerText = question.message;
                 tryAgain.classList.add('hide-content');
                 quizContainer.classList.add('hide-content');
             } else {
+                //Incorrect audio will play
+                incorrectSound();
                 //If answer is incorrect this will display a try again message in place of the image
                 tryAgain.classList.remove('hide-content');
                 questionImage.classList.add('hide-content');
                 //Code below is from stack overflow - https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay
                 //This will display the try again message for 2 seconds before showing the image again
                 setTimeout(function () {
-                    tryAgain.classList.add('hide-content');
                     questionImage.classList.remove('hide-content');
-                }, 2000);
+                    tryAgain.classList.add('hide-content');
+                }, 1000);
             };
         });
     });
@@ -77,12 +81,18 @@ nextButton.addEventListener('click', () => {
     wellDone.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
     getQuestions();
-    if (questions.length > currentQuestion) {
-        console.log('next');
-    } else {
-        quizContainer.classList.add('hide-content');
-    }
+    //Add conditional here
 })
+
+function correctSound() {
+    const correct = new Audio('assets/audio/correct.mp3');
+    correct.play();
+}
+
+function incorrectSound() {
+    const incorrect = new Audio('assets/audio/incorrect.mp3');
+    incorrect.play();
+}
 
 //Quiz Questions
 const questions = [{
@@ -93,7 +103,7 @@ const questions = [{
         c: 'Violin',
         d: 'Flute',
         correct: 'Violin',
-        message: 'It\’s a Violin! The Violin is part of the string family. It has four strings which can be plucked or bowed by the player to make a sound!'
+        message: 'It\’s a Violin! The Violin is part of the string family. It has four strings which can be plucked or bowed by the player to make a sound.'
     },
     {
         question: 'Can you guess which family this instrument belongs to?',
