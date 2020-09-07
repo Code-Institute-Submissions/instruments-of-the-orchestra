@@ -66,7 +66,7 @@ function displayQuestions(question) {
                 tryAgain.classList.remove('hide-content');
                 questionImage.classList.add('hide-content');
                 //Code below is from stack overflow - https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay
-                //This will display the try again message for 2 seconds before showing the image again
+                //This will display the try again message for 1 second before showing the image again
                 setTimeout(function () {
                     questionImage.classList.remove('hide-content');
                     tryAgain.classList.add('hide-content');
