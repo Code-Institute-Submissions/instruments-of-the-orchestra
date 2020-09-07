@@ -90,6 +90,9 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 
 ### Features that have been implemented
 
+- Navigation Bar with a Home Button and About Modal
+- Footer with links to social media and contact form
+
 ### Features left to be implemented
 
 - Quiz
@@ -139,6 +142,8 @@ Created a branch to updated the text content of the answer buttons from the obje
 ### Further Testing
 
 ### Known Bugs
+
+Issue with audio repeating/playing at the same time as other audio clip when button is clicked.
 
 [Contents](#contents)
 
