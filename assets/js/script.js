@@ -81,9 +81,11 @@ nextButton.addEventListener('click', () => {
     wellDone.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
     getQuestions();
-    //Add conditional here
+    //Add conditional here to display finished message on completion of quiz
+    //Find a way to stop questions repeating
 })
 
+//Bug: both sounds will sometimes play together when a button is clicked
 function correctSound() {
     const correct = new Audio('assets/audio/correct.mp3');
     correct.play();
@@ -96,23 +98,228 @@ function incorrectSound() {
 
 //Quiz Questions
 const questions = [{
+        //String Instruments
+        //1
         question: 'Can you guess the name of this instrument?',
-        image: 'assets/images/violin.png',
-        a: 'Clarinet',
-        b: 'Cello',
-        c: 'Violin',
+        image: '',
+        a: 'Double Bass',
+        b: 'Violin',
+        c: 'Cello',
         d: 'Flute',
         correct: 'Violin',
-        message: 'It\’s a Violin! The Violin is part of the string family. It has four strings which can be plucked or bowed by the player to make a sound.'
+        message: 'It\'s the Violin!'
     },
     {
-        question: 'Can you guess which family this instrument belongs to?',
-        image: 'assets/images/trumpet.png',
+        //2
+        question: 'Which of these string instruments has more than four strings?',
+        image: '',
+        a: 'Harp',
+        b: 'Cello',
+        c: 'Oboe',
+        d: 'Piano',
+        correct: 'Harp',
+        message: 'It\'s the Harp!'
+    },
+    {
+        //3
+        question: 'Which of these instruments sounds the lowest?',
+        image: '',
+        a: 'Trombone',
+        b: 'Violin',
+        c: 'Clarinet',
+        d: 'Double Bass',
+        correct: 'Double Bass',
+        message: 'It\'s the Double Bass!'
+    },
+    {
+        //4
+        question: 'What family is this instrument a member of?',
+        image: '',
         a: 'The Percussion Family',
-        b: 'The Brass Family',
+        b: 'The String Family',
+        c: 'The Brass Family',
+        d: 'The Woodwind Family',
+        correct: 'The String Family', //Cello
+        message: 'The Cello is a member of The String Family!'
+    },
+    {
+        //Woodwind Instruments
+        //5
+        question: 'Which of these instruments sounds the highest?',
+        image: '',
+        a: 'Bassoon',
+        b: 'French Horn',
+        c: 'Flute',
+        d: 'Tuba',
+        correct: 'Flute',
+        message: 'It\'s the Flute!'
+    },
+    {
+        //6
+        question: 'Can you guess the name of this instrument?',
+        image: '',
+        a: 'Oboe',
+        b: 'Flute',
+        c: 'French Horn',
+        d: 'Clarinet',
+        correct: 'Oboe',
+        message: 'It\'s the Oboe!'
+    },
+    {
+        //7
+        question: 'Which of these woodwind instruments is played with a double reed?',
+        image: '',
+        a: 'Clarinet',
+        b: 'Flute',
+        c: 'Bassoon',
+        d: 'Trumpet',
+        correct: 'Bassoon',
+        message: 'It\'s the Bassoon!'
+    },
+    {
+        //8
+        question: 'Which family is this instrument a member of?',
+        image: '',
+        a: 'The Brass Family',
+        b: 'The Percussion Family',
         c: 'The String Family',
         d: 'The Woodwind Family',
-        correct: 'The Brass Family',
-        message: 'It\'s a Trumpet!'
+        correct: 'The Woodwind Family', //Clarinet
+        message: 'The Clarinet is a member of The Woodwind Family!'
+    },
+    {
+        //Brass Instruments
+        //9
+        question: 'Which of these instruments sounds the highest?',
+        image: '',
+        a: 'Trumpet',
+        b: 'Trombone',
+        c: 'Flute',
+        d: 'Tuba',
+        correct: 'Trumpet',
+        message: 'It\'s the Trumpet!'
+    },
+    {
+        //10
+        question: 'Can you guess the name of this instrument?',
+        image: '',
+        a: 'English Horn',
+        b: 'Trumpet',
+        c: 'French Horn',
+        d: 'Euphonium',
+        correct: 'French Horn',
+        message: 'It\'s the French Horn!'
+    },
+    {
+        //11
+        question: 'Which of these instruments is played with a slide?',
+        image: '',
+        a: 'Tuba',
+        b: 'Trombone',
+        c: 'French Horn',
+        d: 'Trumpet',
+        correct: 'Trombone',
+        message: 'It\'s the Trombone!'
+    },
+    {
+        //12
+        question: 'Which of these instruments sounds the lowest?',
+        image: '',
+        a: 'Trombone',
+        b: 'Euphonium',
+        c: 'Tuba',
+        d: 'Trumpet',
+        correct: 'Tuba',
+        message: 'It\'s the Tuba!'
+    },
+    {
+        //13
+        question: 'Which family is this instrument a member of?',
+        image: '',
+        a: 'The String Family',
+        b: 'The Percussion Family',
+        c: 'The Woodwind Family',
+        d: 'The Brass Family',
+        correct: 'The Brass Family', //Euphonium
+        message: 'The Euphonium is a member of The Brass Family!'
+    },
+    {
+        //Percussion Instruments
+        //14
+        question: 'Which of these instruments is played using sticks?',
+        image: '',
+        a: 'Harp',
+        b: 'Snare Drum',
+        c: 'Piano',
+        d: 'Flute',
+        correct: 'Snare Drum',
+        message: 'It\'s the Snare Drum!'
+    },
+    {
+        //15
+        question: 'Can you guess the name of this instrument?',
+        image: '',
+        a: 'Timpani',
+        b: 'Bass Drum',
+        c: 'Euphonium',
+        d: 'Snare Drum',
+        correct: 'Timpani',
+        message: 'It\'s the Timpani!'
+    },
+    {
+        //16
+        question: 'Which of these percussion instruments is a tuned percussion instrument?',
+        image: '',
+        a: 'Snare Drum',
+        b: 'Xylophone',
+        c: 'Cymbals',
+        d: 'Bass Drum',
+        correct: 'Xylophone',
+        message: 'It\'s the Xylophone!'
+    },
+    {
+        //17
+        question: 'Can you guess the name of this instrument?',
+        image: '',
+        a: 'Bass Drum',
+        b: 'Snare Drum',
+        c: 'Timpani',
+        d: 'Cymbals',
+        correct: 'Bass Drum',
+        message: 'It\'s the Bass Drum!'
+    },
+    {
+        //18
+        question: 'Which family is this instrument a member of?',
+        image: '',
+        a: 'The Woodwind Family',
+        b: 'The Brass Family',
+        c: 'The Percussion Family',
+        d: 'The String Family',
+        correct: 'The Percussion Family', //Cymbals
+        message: 'The Cymbals are a member of The Percussion Family!'
+    },
+    {
+        //Additional Questions
+        //19
+        question: 'Which of these instruments has black and white keys?',
+        image: '',
+        a: 'Harp',
+        b: 'Piano',
+        c: 'Clarinet',
+        d: 'Oboe',
+        correct: 'Piano',
+        message: 'It\'s the Piano!'
+    },
+    {
+        //20
+        question: 'Which of these instruments is not used in an orchestra?',
+        image: '',
+        a: 'Viola',
+        b: 'Cornet',
+        c: 'Bass Clarinet',
+        d: 'Guitar',
+        correct: 'Guitar',
+        message: 'It\'s the Guitar!'
     }
 ]
