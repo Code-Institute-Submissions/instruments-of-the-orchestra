@@ -11,8 +11,7 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <!-- Google Fonts CDN -->
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Grandstander&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
@@ -26,6 +25,7 @@
 </head>
 
 <body>
+    <!-- Nav Bar -->
     <header>
         <nav class="d-flex justify-content-between">
             <a href="index.html"><i class="nav-icon fas fa-home"></i></a>
@@ -34,6 +34,7 @@
         </nav>
     </header>
 
+    <!-- About Modal -->
     <section>
         <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -51,19 +52,19 @@
                         <p>
                             The instruments in an orchestra are organised into four different families:
                         </p>
-                        <img class="music-icon" src="assets/images/violin.png" alt="Violin">
+                        <img class="music-icon" src="assets/images/violin-icon.png" alt="Violin">
                         <p>
                             The String Family
                         </p>
-                        <img class="music-icon" src="assets/images/clarinet.png" alt="Clarinet">
+                        <img class="music-icon" src="assets/images/clarinet-icon.png" alt="Clarinet">
                         <p>
                             The Woodwind Family
                         </p>
-                        <img class="music-icon" src="assets/images/trumpet.png" alt="Trumpet">
+                        <img class="music-icon" src="assets/images/trumpet-icon.png" alt="Trumpet">
                         <p>
                             The Brass Family
                         </p>
-                        <img class="music-icon" src="assets/images/timpani.png" alt="Timpani">
+                        <img class="music-icon" src="assets/images/timpani-icon.png" alt="Timpani">
                         <p>
                             The Percussion Family
                         </p>
@@ -71,19 +72,21 @@
                             An orchestra can have between 30 and 100 musicians playing on stage at the same time -
                             that’s a lot of musicians!
                         </p>
-                        <img class="music-icon" src="assets/images/conductor.png" alt="Orchestra Conductor Baton">
+                        <img class="music-icon" src="assets/images/conductor-icon.png" alt="Orchestra Conductor Baton">
                         <p>
                             So how do all the musicians play together? They are lead by ‘The Conductor’. It is the
                             conductors job to tell the musicians when to start and stop playing, how fast or slow to
                             play, and how loud or quiet to play.
                         </p>
-                        <button type="button" class="button close-button" data-dismiss="modal">Close</button>
+                        <button type="button" class="button close-button" data-dismiss="modal">Close <i
+                                class="fas fa-times"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Form Content -->
     <section class="content-center">
         <div class="card content-container contact-form">
             <h2>Thank you for taking the Instruments of the Orchestra Quiz</h2>
@@ -113,11 +116,12 @@
                     <textarea class="form-control" name="message" id="message" placeholder="Enter Your Message Here"
                         required></textarea>
                 </div>
-                <button type="submit" class="button submit-button">Submit</button>
+                <button type="submit" class="button submit-button">Submit <i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
     </section>
 
+    <!-- Contact/Social Links -->
     <footer>
         <div>
             <a href="https://github.com/KirstChat" target="_blank"><i class="nav-icon fab fa-github"></i></a>
