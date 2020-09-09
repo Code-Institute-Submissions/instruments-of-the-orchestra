@@ -208,9 +208,11 @@ git clone
 Sound
 
 Images
-[Music vector created by macrovector - www.freepik.com](https://www.freepik.com/vectors/music)
+[Orchestra Vector](https://www.freepik.com/vectors/music)
 
-[Icons made by](https://www.flaticon.com/authors/freepik)
+[Icons](https://www.flaticon.com/authors/freepik)
+
+[Violin](https://en.wikipedia.org/wiki/Violin)
 
 ### Acknowledgements
 
