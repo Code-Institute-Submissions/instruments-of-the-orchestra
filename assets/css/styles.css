@@ -12,10 +12,6 @@
     /* Orange Peel*/
     --dark-orange: #F28E02;
     /* Carrot Orange*/
-    --yellow: #F9C74F;
-    /* Maize Crayola */
-    --dark-yellow: #F7B926;
-    /* Selective Yellow */
     --green: #7DBE5B;
     /* Mantis */
     --dark-green: #6BAF46;
@@ -56,13 +52,17 @@ body {
 /* ---------- Headings ---------- */
 h1,
 h2 {
-    font-size: 2.1rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 h1 {
+    font-size: 2rem;
     font-family: 'Grandstander', cursive;
+}
+
+h2 {
+    font-size: 1.8rem;
 }
 
 /* ---------- End Headings ---------- */
@@ -90,7 +90,6 @@ h1 {
 .orchestra-img {
     width: 100%;
     margin: 20px 0;
-    border-radius: 20px;
 }
 
 .music-icon {
@@ -240,3 +239,21 @@ to add a simple button animation */
 }
 
 /* ---------- End Footer ---------- */
+
+/* ---------- Media Queries ---------- */
+@media only screen and (min-width: 426px) {
+    .orchestra-img {
+        width: 50%;
+        margin: 20px 0;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+}
+
+/* ---------- End Media Queries ---------- */
