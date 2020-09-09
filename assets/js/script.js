@@ -23,25 +23,28 @@ startButton.addEventListener('click', startQuiz);
 function startQuiz() {
     welcomeContainer.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
-    getQuestions();
+    getQuestions(questions);
 }
 
 //The code below is from the Web Dev Simplified YouTube video Build a Quiz App with JavaScript - https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s
 //This function will display the questions in a random order
-function getQuestions() {
-    randomQuestion = questions.sort(() => Math.random() - 0.5);
+function getQuestions(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    // randomQuestion = questions.sort(() => Math.random() - 0.5);
     currentQuestion = 0;
-    displayQuestions(randomQuestion[currentQuestion]);
+    displayQuiz(a[currentQuestion]);
 }
 
 //This function displays the questions and answers in the quiz container
-function displayQuestions(question) {
-    //Sets the text of the question
-    questionText.innerText = question.question;
-    //Sets the image source
-    questionImage.src = question.image;
-    //Sets the text of the answer buttons
-    answerA.innerText = question.a;
+function displayQuiz(question) {
+    questionText.innerText = question.question; //Sets the text of the question
+    questionImage.src = question.image; //Sets the image source
+    answerA.innerHTML = question.a; //Sets the text of the answer buttons
     answerB.innerText = question.b;
     answerC.innerText = question.c;
     answerD.innerText = question.d;
@@ -52,16 +55,14 @@ function displayQuestions(question) {
         button.addEventListener('click', () => {
             const correctAnswer = question.correct;
             if (button.innerText === correctAnswer) {
-                //Correct audio will play
-                correctSound();
+                // correctSound();
                 //If answer is correct this will display a well done message and hide all other content
                 wellDone.classList.remove('hide-content');
                 document.getElementById('message').innerText = question.message;
                 tryAgain.classList.add('hide-content');
                 quizContainer.classList.add('hide-content');
             } else {
-                //Incorrect audio will play
-                incorrectSound();
+                // incorrectSound();
                 //If answer is incorrect this will display a try again message in place of the image
                 tryAgain.classList.remove('hide-content');
                 questionImage.classList.add('hide-content');
@@ -74,18 +75,26 @@ function displayQuestions(question) {
             };
         });
     });
+    nextQuestion();
 }
 
 //Adds a click event listener to the next button which will display the next question
-nextButton.addEventListener('click', () => {
-    wellDone.classList.add('hide-content');
-    quizContainer.classList.remove('hide-content');
-    getQuestions();
-    //Add conditional here to display finished message on completion of quiz
-    //Find a way to stop questions repeating
-})
+function nextQuestion() {
+    nextButton.addEventListener('click', () => {
+        getQuestions(questions);
+        ++currentQuestion;
+        if (currentQuestion === questions.length) {
+            document.getElementById('quiz-finished').classList.remove('hide-content');
+            wellDone.classList.add('hide-content');
+        } else {
+            wellDone.classList.add('hide-content');
+            quizContainer.classList.remove('hide-content');
+        };
+    })
+}
 
-//Bug: both sounds will sometimes play together when a button is clicked
+
+//Bug: both sounds sometimes play together when a button is clicked
 function correctSound() {
     const correct = new Audio('assets/audio/correct.mp3');
     correct.play();
@@ -125,7 +134,7 @@ const questions = [{
         question: 'Which of these instruments sounds the lowest?',
         image: '',
         a: 'Trombone',
-        b: 'Violin',
+        b: 'French Horn',
         c: 'Clarinet',
         d: 'Double Bass',
         correct: 'Double Bass',
@@ -154,6 +163,7 @@ const questions = [{
         correct: 'Flute',
         message: 'It\'s the Flute!'
     },
+
     {
         //6
         question: 'Can you guess the name of this instrument?',
@@ -194,7 +204,7 @@ const questions = [{
         image: '',
         a: 'Trumpet',
         b: 'Trombone',
-        c: 'Flute',
+        c: 'French Horn',
         d: 'Tuba',
         correct: 'Trumpet',
         message: 'It\'s the Trumpet!'
