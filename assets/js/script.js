@@ -55,14 +55,14 @@ function displayQuiz(question) {
         button.addEventListener('click', () => {
             const correctAnswer = question.correct;
             if (button.innerText === correctAnswer) {
-                // correctSound();
+                // correctSound(); - Temporary Mute
                 //If answer is correct this will display a well done message and hide all other content
                 wellDone.classList.remove('hide-content');
                 wellDoneMessage.innerHTML = question.message;
                 tryAgain.classList.add('hide-content');
                 quizContainer.classList.add('hide-content');
             } else {
-                // incorrectSound();
+                // incorrectSound(); //Temporary Mute
                 //If answer is incorrect this will display a try again message for 1 second
                 tryAgain.classList.remove('hide-content');
                 //Code below is from stack overflow - https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay

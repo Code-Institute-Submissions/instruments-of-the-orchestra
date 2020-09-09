@@ -88,10 +88,10 @@
 
     <!-- Quiz Content -->
     <section class="content-center">
-        <div class="card content-container">
+        <div class="content-container">
             <!-- Welcome Content -->
             <div id="welcome-container">
-                <h1>Welcome to Instruments of the Orchestra</h1>
+                <h1>Welcome to<br>Instruments of the Orchestra!</h1>
                 <img class="orchestra-img" src="assets/images/orchestra.jpg" alt="Orchestra">
                 <p>
                     A quiz that will teach you about the different instruments played in an orchestra.
@@ -113,8 +113,7 @@
             </div>
             <!-- Quiz Content -->
             <div id="quiz-container" class="hide-content">
-                <h2 id="question-text">Question</h2>
-                <img id="question-img" src=" " alt=" ">
+                <div id="question"></div>
                 <div id="try-again" class="hide-content">
                     <h2>Try Again!</h2>
                 </div>
@@ -132,13 +131,13 @@
             <!-- Well Done Content -->
             <div id="well-done" class="hide-content">
                 <h2>Well Done!</h2>
-                <p id="message"></p>
+                <div id="message"></div>
                 <button id="next-button" class="button">Next Question <i class="fas fa-arrow-right"></i></button>
             </div>
             <!-- Finished Content -->
-            <div id="quiz-finished" class="hide-content">
+            <div id="finish-container" class="hide-content">
                 <h2>Finished</h2>
-                <button class="button answer-button">Start Quiz Again</button>
+                <button class="button finish-button">Play Quiz Again</button>
             </div>
         </div>
     </section>
