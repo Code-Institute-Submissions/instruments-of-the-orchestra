@@ -188,15 +188,15 @@ git clone
 
 ### Code
 
-[Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s)
+[Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s) - How to go about making a quiz in JavaScript
 
-[W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3) - Button animation
+[W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3) - Button Animation
 
-[Loops](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/)
+[Fisher-Yates Shuffle](https://javascript.info/task/shuffle) - Loop through an array randomly
 
-[Favicon](https://www.w3.org/2005/10/howto-favicon)
+[Favicon](https://www.w3.org/2005/10/howto-favicon) - Adding a Favicon to a webpage
 
-[setTimeOut](https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay)
+[setTimeOut](https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay) - How to hide content again after a certain amount of time
 
 ### Content
 
