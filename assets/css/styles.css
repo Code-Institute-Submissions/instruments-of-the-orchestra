@@ -94,7 +94,12 @@ h2 {
 }
 
 .music-icon {
+    width: 20%;
     margin: 20px 0;
+}
+
+.bold-text {
+    font-weight: 700;
 }
 
 /* ---------- End About Modal ---------- */
