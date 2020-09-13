@@ -7,7 +7,7 @@ const nextButton = document.getElementById('next-button');
 const wellDone = document.getElementById('well-done');
 const wellDoneMessage = document.getElementById('message');
 const tryAgain = document.getElementById('try-again');
-const finishQuiz = document.getElementById('finish-container')
+const finishQuiz = document.getElementById('finish-container');
 
 //Answer Buttons
 const answerA = document.getElementById('answer-a');
@@ -15,7 +15,7 @@ const answerB = document.getElementById('answer-b');
 const answerC = document.getElementById('answer-c');
 const answerD = document.getElementById('answer-d');
 
-let randomQuestion, currentQuestion;
+let currentQuestion;
 
 //When the start button is clicked the startQuiz function is executed
 startButton.addEventListener('click', startQuiz);
@@ -32,16 +32,14 @@ function getQuestions(a) {
     //Fisher-Yates Shuffle Method - https://javascript.info/task/shuffle
     for (let i = a.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
-        let x = a[i];
-        a[i] = a[j];
-        a[j] = x;
+        [a[i], a[j]] = [a[j], a[i]];
     }
     currentQuestion = 0;
-    displayQuiz(a[currentQuestion]);
+    displayQuestions(a[currentQuestion]);
 }
 
 //This function displays the questions and answers in the quiz container
-function displayQuiz(question) {
+function displayQuestions(question) {
     //Sets the question text and image
     questionText.innerHTML = question.question;
     //Sets the text of the answer buttons
@@ -51,16 +49,17 @@ function displayQuiz(question) {
     answerD.innerText = question.d;
 
     //Adds a click event listener to each of the buttons which will display a message if the answer clicked is correct or incorrect
+    //Bug: some buttons pass as correct even though answer is wrong
     answerButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const correctAnswer = question.correct;
-            if (button.innerText === correctAnswer) {
+            if (button.innerText === question.correct) {
                 // correctSound(); - Temporary Mute
                 //If answer is correct this will display a well done message and hide all other content
                 wellDone.classList.remove('hide-content');
                 wellDoneMessage.innerHTML = question.message;
                 tryAgain.classList.add('hide-content');
                 quizContainer.classList.add('hide-content');
+                currentQuestion++;
             } else {
                 // incorrectSound(); //Temporary Mute
                 //If answer is incorrect this will display a try again message for 1 second
@@ -78,10 +77,10 @@ function displayQuiz(question) {
 //Adds a click event listener to the next button which will display the next question
 //Bug: some questions are repeated and quiz doesn't end - works with one question
 function nextQuestion() {
+    questions.shift();
     nextButton.addEventListener('click', () => {
         getQuestions(questions);
-        ++currentQuestion;
-        if (currentQuestion === questions.length) {
+        if (questions.length < currentQuestion) {
             finishQuiz.classList.remove('hide-content');
             wellDone.classList.add('hide-content');
         } else {
@@ -90,7 +89,6 @@ function nextQuestion() {
         };
     })
 }
-
 
 //Bug: both sounds sometimes play together when a button is clicked
 function correctSound() {
@@ -107,115 +105,107 @@ function incorrectSound() {
 const questions = [{
         //String Instruments
         //1
-        question: `<h2>Can you guess the name of this instrument?</h2><br><img class="question-img" src="assets/images/violin.jpg" alt="Violin">`,
+        question: `<h2>Can you guess the name of this instrument?</h2><img class="quiz-img" src="assets/images/violin.jpg" alt="Violin">`,
         a: 'Double Bass',
         b: 'Violin',
         c: 'Cello',
         d: 'Flute',
         correct: 'Violin',
-        message: `<img class="question-img" src="" alt=""><p>It's the Violin!</p>`
+        message: `<img class="quiz-img" src="assets/images/violinist.jpg" alt="Man Playing Violin"><p>It's the Violin!</p>`
     },
     {
         //2
-        question: `<h2>Which of these string instruments has more than four strings?</h2>`,
+        question: `<h2>Which of these string instruments has more than four strings?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
         a: 'Harp',
         b: 'Cello',
         c: 'Oboe',
         d: 'Piano',
         correct: 'Harp',
-        message: `<img class="question-img" src="" alt="Harp"><br><p>It's the Harp!</p>`
+        message: `<img class="quiz-img" src="assets/images/harp.jpg" alt="Harp"><br><p>It's the Harp!</p>`
     },
-    //     {
-    //         //3
-    //         question: 'Which of these instruments sounds the lowest?',
-    //         image: '',
-    //         a: 'Trombone',
-    //         b: 'French Horn',
-    //         c: 'Clarinet',
-    //         d: 'Double Bass',
-    //         correct: 'Double Bass',
-    //         message: 'It\'s the Double Bass!'
-    //     },
-    //     {
-    //         //4
-    //         question: 'What family is this instrument a member of?',
-    //         image: '',
-    //         a: 'The Percussion Family',
-    //         b: 'The String Family',
-    //         c: 'The Brass Family',
-    //         d: 'The Woodwind Family',
-    //         correct: 'The String Family', //Cello
-    //         message: 'The Cello is a member of The String Family!'
-    //     },
-    //     {
-    //         //Woodwind Instruments
-    //         //5
-    //         question: 'Which of these instruments sounds the highest?',
-    //         image: '',
-    //         a: 'Bassoon',
-    //         b: 'French Horn',
-    //         c: 'Flute',
-    //         d: 'Tuba',
-    //         correct: 'Flute',
-    //         message: 'It\'s the Flute!'
-    //     },
+    {
+        //3
+        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
+        a: 'Trombone',
+        b: 'French Horn',
+        c: 'Clarinet',
+        d: 'Double Bass',
+        correct: 'Double Bass',
+        message: `<img class="quiz-img" src="assets/images/double-bass.jpg" alt="Man Playing Double Bass"><p>It's the Double Bass!</p>`
+    },
+    {
+        //4
+        question: `<h2>Which family is this instrument a member of?</h2><img class="quiz-img" src="assets/images/cello.jpg" alt="Cello">`,
+        a: 'The Percussion Family',
+        b: 'The String Family',
+        c: 'The Brass Family',
+        d: 'The Woodwind Family',
+        correct: 'The String Family', //Cello
+        message: `<img class="quiz-img" src="assets/images/cello-player.jpg" alt="Man Playing the Cello"><p>The Cello is a member of The String Family!</p>`
+    },
+    {
+        //Woodwind Instruments
+        //5
+        question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
+        a: 'Bassoon',
+        b: 'French Horn',
+        c: 'Flute',
+        d: 'Tuba',
+        correct: 'Flute',
+        message: `<img class="quiz-img" src="assets/images/flute-player.jpg" alt="Someone Playing the Flute"><p>It's the Flute!</p>`
+    },
 
-    //     {
-    //         //6
-    //         question: 'Can you guess the name of this instrument?',
-    //         image: '',
-    //         a: 'Oboe',
-    //         b: 'Flute',
-    //         c: 'French Horn',
-    //         d: 'Clarinet',
-    //         correct: 'Oboe',
-    //         message: 'It\'s the Oboe!'
-    //     },
-    //     {
-    //         //7
-    //         question: 'Which of these woodwind instruments is played with a double reed?',
-    //         image: '',
-    //         a: 'Clarinet',
-    //         b: 'Flute',
-    //         c: 'Bassoon',
-    //         d: 'Trumpet',
-    //         correct: 'Bassoon',
-    //         message: 'It\'s the Bassoon!'
-    //     },
-    //     {
-    //         //8
-    //         question: 'Which family is this instrument a member of?',
-    //         image: '',
-    //         a: 'The Brass Family',
-    //         b: 'The Percussion Family',
-    //         c: 'The String Family',
-    //         d: 'The Woodwind Family',
-    //         correct: 'The Woodwind Family', //Clarinet
-    //         message: 'The Clarinet is a member of The Woodwind Family!'
-    //     },
-    //     {
-    //         //Brass Instruments
-    //         //9
-    //         question: 'Which of these instruments sounds the highest?',
-    //         image: '',
-    //         a: 'Trumpet',
-    //         b: 'Trombone',
-    //         c: 'French Horn',
-    //         d: 'Tuba',
-    //         correct: 'Trumpet',
-    //         message: 'It\'s the Trumpet!'
-    //     },
-    //     {
-    //         //10
-    //         question: 'Can you guess the name of this instrument?',
-    //         image: '',
-    //         a: 'English Horn',
-    //         b: 'Trumpet',
-    //         c: 'French Horn',
-    //         d: 'Euphonium',
-    //         correct: 'French Horn',
-    //         message: 'It\'s the French Horn!'
-    //     },
+    // {
+    //     //6
+    //     question: `<h2>Can you guess the name of this instrument?</h2>`,
+    //     a: 'Oboe',
+    //     b: 'Flute',
+    //     c: 'French Horn',
+    //     d: 'Clarinet',
+    //     correct: 'Oboe',
+    //     message: `<p>It's the Oboe!</p>`
+    // },
+    // {
+    //     //7
+    //     question: `<h2>Which of these woodwind instruments is played with a double reed?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
+    //     a: 'Clarinet',
+    //     b: 'Flute',
+    //     c: 'Bassoon',
+    //     d: 'Trumpet',
+    //     correct: 'Bassoon',
+    //     message: `<p>It's the Bassoon!</p>`
+    // },
+    // {
+    //     //8
+    //     question: `<h2>Which family is this instrument a member of?</h2>`,
+    //     a: 'The Brass Family',
+    //     b: 'The Percussion Family',
+    //     c: 'The String Family',
+    //     d: 'The Woodwind Family',
+    //     correct: 'The Woodwind Family', //Clarinet
+    //     message: `<p>The Clarinet is a member of The Woodwind Family!</p>`
+    // },
+    // {
+    //     //Brass Instruments
+    //     //9
+    //     question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
+    //     a: 'Trumpet',
+    //     b: 'Trombone',
+    //     c: 'French Horn',
+    //     d: 'Tuba',
+    //     correct: 'Trumpet',
+    //     message: `<p>It's the Trumpet!</p>`
+    // },
+    // {
+    //     //10
+    //     question: `<h2>Can you guess the name of this instrument?</h2>`,
+    //     a: 'English Horn',
+    //     b: 'Trumpet',
+    //     c: 'French Horn',
+    //     d: 'Euphonium',
+    //     correct: 'French Horn',
+    //     message: `<p>It's the French Horn!</p>`
+    // },
     //     {
     //         //11
     //         question: 'Which of these instruments is played with a slide?',

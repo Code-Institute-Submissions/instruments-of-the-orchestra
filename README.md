@@ -95,7 +95,10 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 
 ### Features left to be implemented
 
-- Quiz
+- Quiz - Started following layout in Web Dev video but struggled to run a conditional on answers | Changed looping method to Fisher-Yates - considered to be more reliable
+
+- Sound Based Questions
+
 - Feedback Form (add EmailJS)
 
 - Learning Section
@@ -198,6 +201,8 @@ git clone
 
 [setTimeOut](https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay) - How to hide content again after a certain amount of time
 
+[Button Loop](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/)
+
 ### Content
 
 - All content on the site was written by the developer.
@@ -210,7 +215,7 @@ Sound
 Images
 [Orchestra Vector](https://www.freepik.com/vectors/music)
 
-[Icons](https://www.flaticon.com/authors/freepik)
+[Icons](https://www.flaticon.com/authors/freepik) - About Modal Icons and Quiz Question Icons
 
 [Violin](https://en.wikipedia.org/wiki/Violin)
 
