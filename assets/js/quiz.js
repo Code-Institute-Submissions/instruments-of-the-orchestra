@@ -64,10 +64,17 @@ answers.forEach(answer => {
         } else {
             //Try Again message is displayed
             tryAgain.classList.remove('hide-content');
+            quizContainer.classList.add('hide-content');
             //Code below is from stack overflow to hide the try again message after 1 second- https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay
-            setTimeout(function () {
+            const tryButton = document.getElementById('try-button');
+            tryButton.addEventListener('click', () => {
                 tryAgain.classList.add('hide-content');
-            }, 1000);
+                quizContainer.classList.remove('hide-content');
+            })
+            // setTimeout(function () {
+            //     tryAgain.classList.add('hide-content');
+            //     quizContainer.classList.remove('hide-content');
+            // }, 2000);
         }
     })
 })
@@ -96,7 +103,7 @@ const questions = [{
         answer3: 'Cello',
         answer4: 'Flute',
         correct: '2', //Violin
-        message: `<img class="quiz-img" src="assets/images/violinist.jpg" alt="Man Playing the Violin"><p>It's the Violin!</p>`
+        message: `<img class="quiz-img" src="assets/images/violinist.jpg" alt="Man Playing the Violin"><p>It's the Violin.</p><p>The Violin is a member of The String Family.</p>`
     },
     {
         //2
@@ -106,7 +113,7 @@ const questions = [{
         answer3: 'Oboe',
         answer4: 'Piano',
         correct: '1', //Harp
-        message: `<img class="quiz-img" src="assets/images/harp.jpg" alt="Harp"><p>It's the Harp!</p>`
+        message: `<img class="quiz-img" src="assets/images/harp.jpg" alt="Harp"><p>It's the Harp.</p>`
     },
     {
         //3
@@ -151,7 +158,7 @@ const questions = [{
     },
     {
         //7
-        question: `<h2>Which of these woodwind instruments is played with a double reed?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments is played with a double reed?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
         answer1: 'Clarinet',
         answer2: 'Flute',
         answer3: 'Bassoon',
@@ -192,7 +199,7 @@ const questions = [{
     },
     {
         //11
-        question: `<h2>Which of these instruments is played with a slide?</h2>`,
+        question: `<h2>Which of these instruments is played with a slide?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
         answer1: 'Tuba',
         answer2: 'Trombone',
         answer3: 'French Horn',
@@ -202,7 +209,7 @@ const questions = [{
     },
     {
         //12
-        question: `<h2>Which of these instruments sounds the lowest?</h2>`,
+        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
         answer1: 'Trombone',
         answer2: 'Euphonium',
         answer3: 'Tuba',
@@ -243,7 +250,7 @@ const questions = [{
     },
     {
         //16
-        question: `<h2>Which of these percussion instruments is a tuned percussion instrument?</h2>`,
+        question: `<h2>Which of these instruments is a tuned percussion instrument?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
         answer1: 'Snare Drum',
         answer2: 'Xylophone',
         answer3: 'Cymbals',
@@ -274,7 +281,7 @@ const questions = [{
     {
         //Additional Questions
         //19
-        question: `<h2>Which of these instruments has black and white keys?</h2>`,
+        question: `<h2>Which of these instruments has black and white keys?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
         answer1: 'Harp',
         answer2: 'Piano',
         answer3: 'Clarinet',
@@ -284,7 +291,7 @@ const questions = [{
     },
     {
         //20
-        question: `<h2>Which of these instruments is not used in an orchestra?</h2>`,
+        question: `<h2>Which of these instruments is not used in an orchestra?</h2><img class="quiz-img" src="assets/images/question.png" alt="Question Mark">`,
         answer1: 'Viola',
         answer2: 'Cornet',
         answer3: 'Bass Clarinet',
