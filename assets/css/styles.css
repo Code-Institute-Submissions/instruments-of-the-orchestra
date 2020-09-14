@@ -166,7 +166,7 @@ h2 {
 .start-button,
 .submit-button,
 .close-button,
-.finish-button,
+#finish-button,
 #next-button {
     margin-top: 10px;
     background-color: var(--pink);
@@ -200,7 +200,7 @@ to add a simple button animation */
 .start-button:hover,
 .submit-button:hover,
 .close-button:hover,
-.finish-button:hover,
+#finish-button:hover,
 #next-button:hover {
     background-color: var(--dark-pink);
 }
