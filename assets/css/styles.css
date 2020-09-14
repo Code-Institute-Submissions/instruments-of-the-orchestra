@@ -163,11 +163,7 @@ h2 {
     box-shadow: 0 5px var(--dark-blue);
 }
 
-.start-button,
-.submit-button,
-.close-button,
-#finish-button,
-#next-button {
+.pink-button {
     margin-top: 10px;
     background-color: var(--pink);
     box-shadow: 0 5px var(--dark-pink);
@@ -197,11 +193,7 @@ to add a simple button animation */
     background-color: var(--dark-blue);
 }
 
-.start-button:hover,
-.submit-button:hover,
-.close-button:hover,
-#finish-button:hover,
-#next-button:hover {
+.pink-button:hover {
     background-color: var(--dark-pink);
 }
 

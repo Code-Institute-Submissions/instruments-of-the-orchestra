@@ -73,7 +73,7 @@
                             It is the conductors job to tell the musicians when to start and stop playing, how fast or
                             slow to play, and how loud or quiet to play.
                         </p>
-                        <button type="button" class="button close-button" data-dismiss="modal">Close <i
+                        <button type="button" class="button pink-button" data-dismiss="modal">Close <i
                                 class="fas fa-times"></i></button>
                     </div>
                 </div>
@@ -104,14 +104,11 @@
                 <p>
                     Good luck!
                 </p>
-                <button id="start-quiz" class="button start-button"><i class="fas fa-music"></i> Start Quiz</button>
+                <button id="start-quiz" class="button pink-button"><i class="fas fa-music"></i> Start Quiz</button>
             </div>
             <!-- Quiz Content -->
             <div id="quiz-container" class="hide-content">
                 <div id="question"></div>
-                <div id="try-again" class="hide-content">
-                    <h2>Try Again!</h2>
-                </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <button id="answer-a" class="button answer-button" data-number="1">Answer</button>
@@ -123,16 +120,26 @@
                     </div>
                 </div>
             </div>
+            <!-- Try Again Content -->
+            <div id="try-again" class="hide-content">
+                <h2>Whoops!</h2>
+                <p>That's not quite right. Why don't you try again?</p>
+                <button id="try-button" class="button pink-button">Try Again</button>
+            </div>
             <!-- Well Done Content -->
             <div id="well-done" class="hide-content">
                 <h2>Well Done!</h2>
                 <div id="message"></div>
-                <button id="next-button" class="button">Next Question <i class="fas fa-arrow-right"></i></button>
+                <button id="next-button" class="button pink-button">Next Question <i
+                        class="fas fa-arrow-right"></i></button>
             </div>
             <!-- Finished Content -->
             <div id="finish-container" class="hide-content">
                 <h2>Finished</h2>
-                <button id="finish-button" class="button">Play Quiz Again</button>
+                <p>Well Done!</p>
+                <p>You've finished the quiz.</p>
+                <p>We hope had fun learning about the different instruments in the orchestra.</p>
+                <button id="finish-button" class="button pink-button">Play Quiz Again</button>
             </div>
         </div>
     </section>
