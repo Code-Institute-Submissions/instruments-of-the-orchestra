@@ -55,6 +55,7 @@ answers.forEach(answer => {
 
         if (selectedAnswer === currentQuestion.correct) {
             //Well Done message is displayed
+            correctSound();
             wellDone.classList.remove('hide-content');
             wellDoneMessage.innerHTML = currentQuestion.message;
             tryAgain.classList.add('hide-content');
@@ -63,18 +64,14 @@ answers.forEach(answer => {
             nextQuestion();
         } else {
             //Try Again message is displayed
+            incorrectSound();
             tryAgain.classList.remove('hide-content');
             quizContainer.classList.add('hide-content');
-            //Code below is from stack overflow to hide the try again message after 1 second- https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay
             const tryButton = document.getElementById('try-button');
             tryButton.addEventListener('click', () => {
                 tryAgain.classList.add('hide-content');
                 quizContainer.classList.remove('hide-content');
             })
-            // setTimeout(function () {
-            //     tryAgain.classList.add('hide-content');
-            //     quizContainer.classList.remove('hide-content');
-            // }, 2000);
         }
     })
 })
@@ -92,6 +89,16 @@ function nextQuestion() {
 
         getQuestion();
     })
+}
+
+function correctSound() {
+    const correct = new Audio('assets/audio/correct.mp3');
+    correct.play();
+}
+
+function incorrectSound() {
+    const incorrect = new Audio('assets/audio/incorrect.mp3');
+    incorrect.play();
 }
 
 const questions = [{
