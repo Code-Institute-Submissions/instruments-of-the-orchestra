@@ -2,6 +2,10 @@
 
 Instruments Of The Orchestra is a fun and interactive quiz aimed at school children who have an interest in music or have recently started learning a musical instrument. The aim of the quiz is to teach school children about the different instruments used in an orchestra.
 
+Insert Am I Responsive Image Here
+
+A demo of the website can be found here: [www.instrumentsoftheorchestra.com](https://kirstchat.github.io/instruments-of-the-orchestra/)
+
 ---
 
 ## Contents
@@ -38,21 +42,21 @@ Instruments Of The Orchestra is a fun and interactive quiz aimed at school child
 
 ### Project Goals
 
-The goal of this project is to create a fun and interactive quiz aimed at school children that will allow them to learn about the different instruments used in an orchestra. Throughout the quiz, the user will learn more about the different instruments and instrument families in the orchestra by being presented with a fact when they answer a question correctly. If a user answers incorrectly, they will be asked to try again until they choose the correct answer. The quiz is designed to be a learning tool and doesn't keep a score of the questions the user has answered correctly. By creating this website, I hope to help school children learn more about the orchestra and hope to encourage more interest in music.
+The goal of this project is to create a fun and interactive quiz aimed at school children that will allow them to learn about the different instruments used in an orchestra. Throughout the quiz, the user will learn more about the different instruments and instrument families in the orchestra by being presented with a fact when they answer a question correctly. If a user answers incorrectly, they will be asked to try again until they choose the correct answer. The quiz is designed to be a learning tool and doesn't keep a score of the questions the user has answered correctly. By creating this quiz, I hope to help school children learn more about the orchestra and encourage them to take an interest in music.
 
 ### User Goals
 
 - As a **user**, I want to easily understand the main purpose of the site on my first visit
-- As a **user**, I want to be able to easily navigate through the site
-- As a **user**, I want to learn about the different instruments used in an orchestra.
-- As a **user**, I want to have a fun while playing the quiz and also have fun learning
-- As a **user**, I want to be able to be able to easily contact the site owner to provide feedback
-- As a **user**, I want to see what other projects the site owner has created
+- As a **user**, I want to be able to easily navigate throughout the site
+- As a **user**, I want to learn about the different instruments used in an orchestra
+- As a **user**, I want to have a fun playing the quiz and also have fun learning
+- As a **user**, I want to be able to easily contact the site owner to provide feedback about the quiz
+- As a **user**, I want to see what other projects the site owner has worked on
 
 ### Site Owner Goals
 
 - As a **site owner**, I want the user to be greeted with a welcome message with a short explanation on what the site is so the user instantly understands the purpose of the site
-- As a **site owner**, I want to include links on all pages of the site to allow the user to easily navigate to other pages in the site
+- As a **site owner**, I want to include links on all pages of the site to allow the user to easily navigate to the other pages
 - As a **site owner**, I want to create a quiz that will teach the user about the different instruments used in an orchestra
 - As a **site owner**, I want to create a fun and interactive experience for the user that will engage them throughout
 - As a **site owner**, I want to include a feedback form to allow the user to easily contact me and leave feedback about the quiz and/or the website itself
@@ -66,11 +70,23 @@ The goal of this project is to create a fun and interactive quiz aimed at school
 
 #### Typography
 
-[](https://fonts.google.com/specimen/ABeeZee?sidebar.open=true&selection.family=ABeeZee|Lato#glyphs)
+[ABeeZee Font](https://fonts.google.com/specimen/ABeeZee?preview.text_type=custom&query=abee)
+
+Used throughout the site
+
+About the font: ABeeZee is a children's learning font. Open, friendly and simple, the definite shapes support the process of learning to read and write. The italic carefully reminds young readers of fluent writing movements and inspires them to create their own unique handwriting.
+
+[Grandstander Font](https://fonts.google.com/specimen/Grandstander?preview.text_type=custom&category=Display,Handwriting,Monospace&query=grand)
+
+Used for the website title on the welcome container
+
+Bit more fun looking
 
 #### Imagery
 
 To make the background of the site more fun and appealing for the user, I drew some music notes and other music related symbols using [Procreate](https://procreate.art/ipad) on an iPad.
+
+Images have been taken from various sites as it was difficult to find free to use images. All websites have been credited in the credit section of this README - only being used for educational purposes.
 
 ### Wireframes
 
@@ -91,17 +107,20 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 ### Features that have been implemented
 
 - Navigation Bar with a Home Button and About Modal
+
 - Footer with links to social media and contact form
+
+- Quiz - Started following layout in Web Dev video but struggled to run a conditional on answers | Changed looping method to Fisher-Yates - considered to be more reliable | Changed method again to follow James Quick video on Building a JavaScript Quiz App
 
 ### Features left to be implemented
 
-- Quiz - Started following layout in Web Dev video but struggled to run a conditional on answers | Changed looping method to Fisher-Yates - considered to be more reliable
+- Feedback Form (add EmailJS) - To be included in this version
 
-- Sound Based Questions
-
-- Feedback Form (add EmailJS)
+- Sound Based Questions - Test on a branch
 
 - Learning Section
+
+- Additional Resources Page - Links to other good websites for extra learning
 
 [Contents](#contents)
 
@@ -120,9 +139,9 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 - [Bootstrap v4.5](https://getbootstrap.com/)
   - Bootstrap was used to give the website a simple, responsive layout.
 - [Google Fonts](https://fonts.google.com/)
-  - Google Fonts was used to add
+  - Google Fonts was used to add the Grandstander and ABeeZee fonts to the site
 - [Font Awesome](https://fontawesome.com/)
-  - Font Awesome was used to add icons for
+  - Font Awesome was used to add icons for...
 - [Git](https://git-scm.com/)
   - Git was used for version control by utilising the terminal in VS Code to commit to Git and push to GitHub.
 - [GitHub](https://github.com/)
@@ -138,7 +157,7 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 
 ## Testing
 
-Created a branch to updated the text content of the answer buttons from the object array in a different wat. With the first version where I looped through the array to updated the text, I was unable to find a way to see if the button clicked was true or false.
+Created a branch to update the text content of the answer buttons from the object array in a different way. With the first version where I looped through the array to update the text, I was unable to find a way to see if the button clicked was true or false.
 
 ### Testing User Stories from UX Section
 
@@ -146,7 +165,7 @@ Created a branch to updated the text content of the answer buttons from the obje
 
 ### Known Bugs
 
-Issue with audio repeating/playing at the same time as other audio clip when button is clicked.
+Issue with audio repeating/playing at the same time as other audio clip when button is clicked in initial script - fixed with latest version. 
 
 [Contents](#contents)
 
@@ -191,17 +210,19 @@ git clone
 
 ### Code
 
-[Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s) - How to go about making a quiz in JavaScript
+[Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s) - How to build a JavaScript Quiz App - Original Quiz Script
+
+[James Q Quick](https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=5) - How to build a JavaScript Quiz App - Updated Quiz Script
 
 [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3) - Button Animation
 
-[Fisher-Yates Shuffle](https://javascript.info/task/shuffle) - Loop through an array randomly
+[Fisher-Yates Shuffle](https://javascript.info/task/shuffle) - Loop through an array randomly - Original Quiz Script
 
 [Favicon](https://www.w3.org/2005/10/howto-favicon) - Adding a Favicon to a webpage
 
-[setTimeOut](https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay) - How to hide content again after a certain amount of time
+[setTimeOut](https://stackoverflow.com/questions/42228423/set-div-to-hidden-then-visible-after-time-delay) - How to hide content again after a certain amount of time - Original Quiz Script
 
-[Button Loop](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/)
+[Button Loop](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/) - Original Quiz Script
 
 ### Content
 
@@ -212,12 +233,54 @@ git clone
 
 Sound
 
+[Correct Sound](https://freesound.org/people/Bertrof/sounds/351566/)
+[Incorrect Sound](https://freesound.org/people/Bertrof/sounds/351565/)
+
 Images
+
+As the site is for educational purposes, I used images from a variety of sites as it was difficult to find all the images needed for the quiz on free image sites.
+
 [Orchestra Vector](https://www.freepik.com/vectors/music)
 
-[Icons](https://www.flaticon.com/authors/freepik) - About Modal Icons and Quiz Question Icons
+[About Modal Icons and Guessing/Thinking Icon](https://www.flaticon.com/authors/freepik)
 
-[Violin](https://en.wikipedia.org/wiki/Violin)
+[Violin](https://en.wikipedia.org/wiki/Violin) | [Violinist](https://unsplash.com/photos/qtYhAQnIwSE)
+
+[Harp](https://unsplash.com/photos/_Wv88h0iXc8)
+
+[Double Bass](https://unsplash.com/photos/k4MQU76YTUI)
+
+[Cello](https://en.wikipedia.org/wiki/Cello) | [Cellist](https://pixabay.com/photos/cello-string-instrument-instrument-521172)
+
+[Flute](https://pixabay.com/photos/music-jazz-flute-musician-3090204/)
+
+[Oboe](https://en.wikipedia.org/wiki/Oboe) | [Oboist](https://blog.primephonic.com/instrument-envy-and-perfection-an-interview-with-san-francisco-symphonys-principal-oboist)
+
+[Bassoon](https://www.yamaha.com/en/musical_instrument_guide/bassoon/play/play002.html)
+
+[Clarinet](https://en.wikipedia.org/wiki/Clarinet) | [Clarinetist](https://pixabay.com/photos/clarinetist-clarinet-jazz-concert-786605/)
+
+[Trumpet](https://unsplash.com/photos/A10y2Eq7OHY)
+
+[French Horn](https://eac.libguides.com/c.php?g=623145&p=4341274)
+
+[Trombone](https://unsplash.com/photos/I_82mPvViOg)
+
+[Tuba](https://www.dkfindout.com/uk/music-art-and-literature/musical-instruments/tuba/)
+
+[Snare Drum](https://pixabay.com/photos/snare-drum-drums-music-small-drum-2661290/) | [Drum Sticks](https://pixabay.com/photos/drum-music-drums-musical-instrument-2720582/)
+
+[Timpani](https://www.dkfindout.com/us/music-art-and-literature/musical-instruments/timpani/)
+
+[Xylophone](https://www.dkfindout.com/us/music-art-and-literature/musical-instruments/xylophone/)
+
+[Bass Drum](https://www.thomann.de/gb/adams_bd36_22_concert_bass_drum_fs.htm)
+
+[Cymbals](https://www.thomann.de/gb/zildjian_20_a_symphonic_viennese_tone.htm) | [Cymbal Players](https://en.wikipedia.org/wiki/Clash_cymbals)
+
+[Piano](https://unsplash.com/photos/tdo2GLH18Ls)
+
+[Guitar](https://unsplash.com/photos/gioH4gHo0-g)
 
 ### Acknowledgements
 
