@@ -165,7 +165,7 @@ Created a branch to update the text content of the answer buttons from the objec
 
 ### Known Bugs
 
-Issue with audio repeating/playing at the same time as other audio clip when button is clicked in initial script - fixed with latest version. 
+Issue with audio repeating/playing at the same time as other audio clip when button is clicked in initial script - fixed with latest version.
 
 [Contents](#contents)
 

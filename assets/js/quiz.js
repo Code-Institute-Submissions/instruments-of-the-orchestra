@@ -29,11 +29,11 @@ function startQuiz() {
     quizContainer.classList.remove('hide-content');
     availableQuestions = [...questions]; //Spread operator
     questionCounter = 0;
-    getQuestion();
+    getQuestions();
 }
 
 //This function will get the questions in a random order and display the question/answers in the quiz container
-function getQuestion() {
+function getQuestions() {
     // questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length); //Random question index number
     currentQuestion = availableQuestions[questionIndex]; //Sets random question
@@ -87,7 +87,7 @@ function nextQuestion() {
             quizContainer.classList.add('hide-content');
         }
 
-        getQuestion();
+        getQuestions();
     })
 }
 
@@ -104,7 +104,7 @@ function incorrectSound() {
 const questions = [{
         //String Instruments
         //1
-        question: `<h2>Can you guess the name of this instrument?</h2><img class="quiz-img" src="assets/images/violin.jpg" alt="Violin">`,
+        question: `<h2>Can you guess the name of this instrument?</h2><img class="quiz-img-portrait" src="assets/images/violin.jpg" alt="Violin">`,
         answer1: 'Double Bass',
         answer2: 'Violin',
         answer3: 'Cello',
@@ -114,7 +114,7 @@ const questions = [{
     },
     {
         //2
-        question: `<h2>Which of these instruments has more than four strings?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments has more than four strings?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Harp',
         answer2: 'Cello',
         answer3: 'Oboe',
@@ -124,7 +124,7 @@ const questions = [{
     },
     {
         //3
-        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Trombone',
         answer2: 'French Horn',
         answer3: 'Clarinet',
@@ -134,7 +134,7 @@ const questions = [{
     },
     {
         //4
-        question: `<h2>Which family is this instrument a member of?</h2><img class="quiz-img" src="assets/images/cello.jpg" alt="Cello">`,
+        question: `<h2>Which family is this instrument a member of?</h2><img class="quiz-img-portrait" src="assets/images/cello.jpg" alt="Cello">`,
         answer1: 'The Percussion Family',
         answer2: 'The String Family',
         answer3: 'The Brass Family',
@@ -145,13 +145,13 @@ const questions = [{
     {
         //Woodwind Instruments
         //5
-        question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Bassoon',
         answer2: 'French Horn',
         answer3: 'Flute',
         answer4: 'Tuba',
         correct: '3', //Flute
-        message: `<img class="quiz-img" src="assets/images/flute-player.jpg" alt="Someone Playing the Flute"><p>It's the Flute!</p>`
+        message: `<img class="quiz-img" src="assets/images/flute.jpg" alt="Someone Playing the Flute"><p>It's the Flute!</p>`
     },
     {
         //6
@@ -165,17 +165,17 @@ const questions = [{
     },
     {
         //7
-        question: `<h2>Which of these instruments is played with a double reed?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments is played with a double reed?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Clarinet',
         answer2: 'Flute',
         answer3: 'Bassoon',
         answer4: 'Trumpet',
         correct: '3', //Bassoon
-        message: `<img class="quiz-img" src="assets/images/bassoon-player.jpg" alt="Someone Playing the Bassoon"><p>It's the Bassoon!</p>`
+        message: `<img class="quiz-img" src="assets/images/bassoon.jpg" alt="Someone Playing the Bassoon"><p>It's the Bassoon!</p>`
     },
     {
         //8
-        question: `<h2>Which family is this instrument a member of?</h2><img class="quiz-img" src="assets/images/clarinet.jpg" alt="Clarinet>`,
+        question: `<h2>Which family is this instrument a member of?</h2><img class="quiz-img-portrait" src="assets/images/clarinet.jpg" alt="Clarinet">`,
         answer1: 'The Brass Family',
         answer2: 'The Percussion Family',
         answer3: 'The String Family',
@@ -186,7 +186,7 @@ const questions = [{
     {
         //Brass Instruments
         //9
-        question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Trumpet',
         answer2: 'Trombone',
         answer3: 'French Horn',
@@ -200,13 +200,13 @@ const questions = [{
         answer1: 'English Horn',
         answer2: 'Trumpet',
         answer3: 'French Horn',
-        answer4: 'Euphonium',
+        answer4: 'Tuba',
         correct: '3', //French Horn
-        message: `<img class="quiz-img" src="assets/images/french-horn-player.jpg" alt="Someone Playing the French Horn"><p>It's the French Horn!</p>`
+        message: `<img class="quiz-img" src="assets/images/french-horn-players.jpg" alt="Someone Playing the French Horn"><p>It's the French Horn!</p>`
     },
     {
         //11
-        question: `<h2>Which of these instruments is played with a slide?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments is played with a slide?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Tuba',
         answer2: 'Trombone',
         answer3: 'French Horn',
@@ -216,9 +216,9 @@ const questions = [{
     },
     {
         //12
-        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Trombone',
-        answer2: 'Euphonium',
+        answer2: 'Clarinet',
         answer3: 'Tuba',
         answer4: 'Trumpet',
         correct: '3', //Tuba
@@ -227,7 +227,7 @@ const questions = [{
     {
         //Percussion Instruments
         //13
-        question: `<h2>Which of these instruments is played using sticks?</h2><img class="quiz-img" src="assets/images/drum-sticks.jpg" alt="Drum Sticks">`,
+        question: `<h2>Which of these instruments is played using sticks?</h2><img class="quiz-img" src="assets/images/sticks.jpg" alt="Drum Sticks">`,
         answer1: 'Harp',
         answer2: 'Snare Drum',
         answer3: 'Piano',
@@ -237,17 +237,17 @@ const questions = [{
     },
     {
         //14
-        question: `<h2>Can you guess the name of this instrument?</h2><img class="quiz-img" src="assets/images/timpani.jpg" alt="Timpani">`,
+        question: `<h2>Can you guess the name of this instrument?</h2><img class="quiz-img-portrait" src="assets/images/timpani.jpg" alt="Timpani">`,
         answer1: 'Timpani',
         answer2: 'Bass Drum',
-        answer3: 'Euphonium',
+        answer3: 'Cymbals',
         answer4: 'Snare Drum',
         correct: '1', //Timpani
-        message: `<img class="quiz-img" src="assets/images/timpani.jpg" alt="Timpani"><p>It's the Timpani!</p>`
+        message: `<img class="quiz-img-portrait" src="assets/images/timpani.jpg" alt="Timpani"><p>It's the Timpani!</p>`
     },
     {
         //15
-        question: `<h2>Which of these instruments is a tuned percussion instrument?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments is a tuned percussion instrument?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Snare Drum',
         answer2: 'Xylophone',
         answer3: 'Cymbals',
@@ -257,16 +257,6 @@ const questions = [{
     },
     {
         //16
-        question: `<h2>Can you guess the name of this instrument?</h2><img class="quiz-img" src="assets/images/bass-drum.jpg" alt="Concert Bass Drum">`,
-        answer1: 'Bass Drum',
-        answer2: 'Snare Drum',
-        answer3: 'Timpani',
-        answer4: 'Cymbals',
-        correct: '1', //Bass Drum
-        message: `<img class="quiz-img" src="assets/images/bass-drum.jpg" alt="Concert Bass Drum"><p>It's the Bass Drum!</p>`
-    },
-    {
-        //17
         question: `<h2>Which family is this instrument a member of?</h2><img class="quiz-img" src="assets/images/cymbals.jpg" alt="Cymbals">`,
         answer1: 'The Woodwind Family',
         answer2: 'The Brass Family',
@@ -277,8 +267,8 @@ const questions = [{
     },
     {
         //Additional Questions
-        //18
-        question: `<h2>Which of these instruments has black and white keys?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        //17
+        question: `<h2>Which of these instruments has black and white keys?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Harp',
         answer2: 'Piano',
         answer3: 'Clarinet',
@@ -287,8 +277,8 @@ const questions = [{
         message: `<img class="quiz-img" src="assets/images/piano-player.jpg" alt="Pianist"><p>It's the Piano!</p>`
     },
     {
-        //19
-        question: `<h2>Which of these instruments is not used in an orchestra?</h2><img class="quiz-icon" src="assets/images/icons/what.png" alt="Question Mark">`,
+        //18
+        question: `<h2>Which of these instruments is not used in an orchestra?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
         answer1: 'Viola',
         answer2: 'Cornet',
         answer3: 'Bass Clarinet',
