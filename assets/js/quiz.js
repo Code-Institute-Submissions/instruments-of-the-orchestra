@@ -110,7 +110,7 @@ const questions = [{
         answer3: 'Cello',
         answer4: 'Flute',
         correct: '2', //Violin
-        message: `<img class="quiz-img" src="assets/images/violin-player.jpg" alt="Someone Playing the Violin"><p>It's the Violin.</p><p>The Violin is a member of The String Family.</p>`
+        message: `<img class="quiz-img" src="assets/images/violin-player.jpg" alt="Someone Playing the Violin"><p>It's the Violin!</p><p>The Violin is a member of The String Family.</p><p>It has four strings which can be plucked or bowed by the player to make a sound.<br>It is also the smallest and highest sounding instrument in The String Family.</p>`
     },
     {
         //2
@@ -120,7 +120,7 @@ const questions = [{
         answer3: 'Oboe',
         answer4: 'Piano',
         correct: '1', //Harp
-        message: `<img class="quiz-img" src="assets/images/harp.jpg" alt="Harp"><p>It's the Harp.</p>`
+        message: `<img class="quiz-img" src="assets/images/harp.jpg" alt="Harp"><p>It's the Harp!</p><p>The Harp is a member of The String Family.</p><p>It is one of the largest string instruments in an orchestra and has over 40 strings.<br>The player plucks or strums the strings to make a sound.</p>`
     },
     {
         //3
@@ -130,7 +130,7 @@ const questions = [{
         answer3: 'Clarinet',
         answer4: 'Double Bass',
         correct: '4', //Double Bass
-        message: `<img class="quiz-img" src="assets/images/double-bass-player.jpg" alt="Someone Playing Double Bass"><p>It's the Double Bass!</p>`
+        message: `<img class="quiz-img" src="assets/images/double-bass-player.jpg" alt="Someone Playing Double Bass"><p>It's the Double Bass!</p><p>The Double Bass is a member of The String Family.</p><p> It is one of the largest string instruments in an orchestra and it has four strings which can be plucked or bowed by the player to make a sound.<br>The Double Bass is also often used in Jazz and Swing music.</p>`
     },
     {
         //4
@@ -138,9 +138,9 @@ const questions = [{
         answer1: 'The Percussion Family',
         answer2: 'The String Family',
         answer3: 'The Brass Family',
-        answer: 'The Woodwind Family',
+        answer4: 'The Woodwind Family',
         correct: '2', //The String Family - Cello
-        message: `<img class="quiz-img" src="assets/images/cello-player.jpg" alt="Someone Playing the Cello"><p>The Cello is a member of The String Family!</p>`
+        message: `<img class="quiz-img" src="assets/images/cello-player.jpg" alt="Someone Playing the Cello"><p>The Cello is a member of The String Family!</p><p>Other members of The String Family include the Violin, the Viola, the Double Bass and the Harp.<br>The Cello has four strings which can be plucked or bowed by the player to make a sound.</p>`
     },
     {
         //Woodwind Instruments
