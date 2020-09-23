@@ -96,7 +96,7 @@
                 I look forward to hearing from you!
             </p>
 
-            <form>
+            <form id="feedback-form" onsubmit="return sendMail(this)">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
                     <input type="text" class="form-control" name="full_name" id="name"
@@ -112,7 +112,8 @@
                     <textarea class="form-control" name="message" id="message" placeholder="Enter Your Message Here"
                         required></textarea>
                 </div>
-                <button type="submit" class="button pink-button">Submit <i class="fas fa-paper-plane"></i></button>
+                <button id="submit-btn" type="submit" class="button pink-button">Submit Feedback <i
+                        class="fas fa-paper-plane"></i></button>
             </form>
         </div>
     </section>
@@ -129,6 +130,18 @@
             <p>Created by Kirsty Chatterton 2020</p>
         </div>
     </footer>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_nAK6YKeQ29Z1blnfxTBlp");
+        })();
+    </script>
+
+    <script src="assets/js/feedback.js"></script>
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
