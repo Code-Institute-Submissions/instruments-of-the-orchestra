@@ -112,17 +112,19 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
 
 - Quiz - Started following layout in Web Dev video but struggled to run a conditional on answers | Changed looping method to Fisher-Yates - considered to be more reliable | Changed method again to follow James Quick video on Building a JavaScript Quiz App
 
+- Feedback Form - added EmailJS
+
 ### Features left to be implemented
 
-- Feedback Form (add EmailJS) - To be included in this version
+- Sound Based Questions and/or sound of each instrument on well done message - Test on a branch
 
-- Sound Based Questions - Test on a branch
+- Difficulty setting - different number of questions for each setting - Test on a branch
 
 - Learning Section
 
 - Additional Resources Page - Links to other good websites for extra learning
 
-- Random the answer order in the buttons
+- Randomize the answer order in the buttons
 
 [Contents](#contents)
 
@@ -152,6 +154,7 @@ The wireframes for my site were created using [Balsamiq](https://balsamiq.com/).
   - Visual Studio Code was the IDE used to code the project.
 - [Balsamiq](https://balsamiq.com/)
   - Balsamiq was used to create the wireframes for desktop, tablet and mobile during the design process.
+- [EmailJS](https://www.emailjs.com/)
 
 [Contents](#contents)
 
@@ -168,6 +171,8 @@ Created a branch to update the text content of the answer buttons from the objec
 ### Known Bugs
 
 Issue with audio repeating/playing at the same time as other audio clip when button is clicked in initial script - fixed with latest version.
+
+Issue with question count - fixed with changing where getQuestions function was called - new issue with user not being able to try the question again.
 
 [Contents](#contents)
 
