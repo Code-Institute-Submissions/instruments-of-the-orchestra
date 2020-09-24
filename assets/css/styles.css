@@ -12,6 +12,10 @@
     /* Orange Peel*/
     --dark-orange: #F28E02;
     /* Carrot Orange*/
+    --yellow: #F9C74F;
+    /* Maize Crayola */
+    --dark-yellow: #F7B926;
+    /* Seductive Yellow */
     --green: #7DBE5B;
     /* Mantis */
     --dark-green: #6BAF46;
@@ -166,8 +170,8 @@ h2 {
 
 .orchestra-button {
     margin: 20px 0;
-    background-color: var(--navy);
-    box-shadow: 0 5px var(--dark-navy);
+    background-color: var(--yellow);
+    box-shadow: 0 5px var(--dark-yellow);
 }
 
 .pink-button {
@@ -201,7 +205,7 @@ to add a simple button animation */
 }
 
 .orchestra-button:hover {
-    background-color: var(--dark-navy);
+    background-color: var(--dark-yellow);
 }
 
 .pink-button:hover {
