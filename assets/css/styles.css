@@ -164,6 +164,12 @@ h2 {
     box-shadow: 0 5px var(--dark-blue);
 }
 
+.orchestra-button {
+    margin: 20px 0;
+    background-color: var(--navy);
+    box-shadow: 0 5px var(--dark-navy);
+}
+
 .pink-button {
     margin-top: 10px;
     background-color: var(--pink);
@@ -192,6 +198,10 @@ to add a simple button animation */
 
 #answer-d:hover {
     background-color: var(--dark-blue);
+}
+
+.orchestra-button:hover {
+    background-color: var(--dark-navy);
 }
 
 .pink-button:hover {
