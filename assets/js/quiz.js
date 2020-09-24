@@ -9,13 +9,15 @@ const wellDone = document.getElementById('well-done');
 const wellDoneMessage = document.getElementById('message');
 const nextButton = document.getElementById('next-button');
 const tryAgain = document.getElementById('try-again');
+const tryButton = document.getElementById('try-button');
 const finish = document.getElementById('finish-container');
 const finishButton = document.getElementById('finish-button');
 
 let availableQuestions = [];
 let currentQuestion = {};
 let questionCounter;
-let maxQuestions = 15;
+
+const maxQuestions = 3;
 
 //Code below is based on James Q Quick's Build a Quiz App part 3 - https://www.youtube.com/watch?v=zZdQGs62cR8&t=13s
 
@@ -35,14 +37,25 @@ function startQuiz() {
 
 //The getQuestions function will display the questions in a random order
 function getQuestions() {
-    // questionCounter++;
+    if (availableQuestions.length === 0 || questionCounter === maxQuestions) {
+        finish.classList.remove('hide-content');
+        wellDone.classList.add('hide-content');
+        quizContainer.classList.add('hide-content');
+    }
+
+    questionCounter++;
+    console.log(questionCounter + " questionCounter");
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length); //Random question index number
+    // console.log(questionIndex + " questionIndex");
+
     currentQuestion = availableQuestions[questionIndex]; //Sets random question
     question.innerHTML = currentQuestion.question; //Sets innerHTML of the quiz question
+    // console.log(currentQuestion);
 
     answers.forEach(answer => {
-        const number = answer.dataset["number"];
-        answer.innerText = currentQuestion["answer" + number]; //Sets innerText of answer buttons
+        const number = answer.dataset['number'];
+        answer.innerText = currentQuestion['answer' + number]; //Sets innerText of answer buttons
     })
 
     availableQuestions.splice(questionIndex, 1); //Removes answered question from quiz
@@ -52,7 +65,7 @@ function getQuestions() {
 answers.forEach(answer => {
     answer.addEventListener('click', e => {
         const selectedButton = e.target;
-        const selectedAnswer = selectedButton.dataset["number"];
+        const selectedAnswer = selectedButton.dataset['number'];
 
         if (selectedAnswer === currentQuestion.correct) {
             //Well Done message is displayed and correct sound is played
@@ -61,14 +74,12 @@ answers.forEach(answer => {
             wellDoneMessage.innerHTML = currentQuestion.message;
             tryAgain.classList.add('hide-content');
             quizContainer.classList.add('hide-content');
-            questionCounter++;
-            nextQuestion(); //The nextQuestion function is called
         } else {
             //Try Again message is displayed and incorrect sound is played
             incorrectSound();
             tryAgain.classList.remove('hide-content');
             quizContainer.classList.add('hide-content');
-            const tryButton = document.getElementById('try-button');
+
             tryButton.addEventListener('click', () => {
                 tryAgain.classList.add('hide-content');
                 quizContainer.classList.remove('hide-content');
@@ -77,21 +88,11 @@ answers.forEach(answer => {
     })
 })
 
-//The nextQuestion function displays the next question in the quiz
-function nextQuestion() {
-    nextButton.addEventListener('click', () => {
-        wellDone.classList.add('hide-content');
-        quizContainer.classList.remove('hide-content');
-
-        if (availableQuestions.length == 0 || questionCounter == maxQuestions) {
-            finish.classList.remove('hide-content');
-            wellDone.classList.add('hide-content');
-            quizContainer.classList.add('hide-content');
-        }
-
-        getQuestions();
-    })
-}
+nextButton.addEventListener('click', () => {
+    wellDone.classList.add('hide-content');
+    quizContainer.classList.remove('hide-content');
+    getQuestions();
+})
 
 //Plays correct sound when called
 function correctSound() {
@@ -123,7 +124,7 @@ const questions = [{
     },
     {
         //2
-        question: `<h2>Which of these instruments has more than four strings?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments has more than four strings?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Harp',
         answer2: 'Cello',
         answer3: 'Oboe',
@@ -137,7 +138,7 @@ const questions = [{
     },
     {
         //3
-        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Trombone',
         answer2: 'French Horn',
         answer3: 'Clarinet',
@@ -165,7 +166,7 @@ const questions = [{
     {
         //Woodwind Instruments
         //5
-        question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Bassoon',
         answer2: 'French Horn',
         answer3: 'Flute',
@@ -193,7 +194,7 @@ const questions = [{
     },
     {
         //7
-        question: `<h2>Which of these instruments is played with a double reed?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments is played with a double reed?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Clarinet',
         answer2: 'Flute',
         answer3: 'Bassoon',
@@ -222,7 +223,7 @@ const questions = [{
     {
         //Brass Instruments
         //9
-        question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments sounds the highest?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Trumpet',
         answer2: 'Trombone',
         answer3: 'French Horn',
@@ -251,7 +252,7 @@ const questions = [{
     },
     {
         //11
-        question: `<h2>Which of these instruments is played with a slide?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments is played with a slide?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Tuba',
         answer2: 'Trombone',
         answer3: 'French Horn',
@@ -265,7 +266,7 @@ const questions = [{
     },
     {
         //12
-        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments sounds the lowest?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Trombone',
         answer2: 'Clarinet',
         answer3: 'Tuba',
@@ -308,7 +309,7 @@ const questions = [{
     },
     {
         //15
-        question: `<h2>Which of these instruments is a tuned percussion instrument?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments is a tuned percussion instrument?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Snare Drum',
         answer2: 'Xylophone',
         answer3: 'Cymbals',
@@ -336,7 +337,7 @@ const questions = [{
     {
         //Additional Questions
         //17
-        question: `<h2>Which of these instruments has black and white keys?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments has black and white keys?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Harp',
         answer2: 'Piano',
         answer3: 'Clarinet',
@@ -350,7 +351,7 @@ const questions = [{
     },
     {
         //18
-        question: `<h2>Which of these instruments is not used in an orchestra?</h2><img class="quiz-img-portrait" src="assets/images/icons/what.png" alt="Question Mark">`,
+        question: `<h2>Which of these instruments is not used in an orchestra?</h2><img class="quiz-img-portrait" src="assets/images/icons/question.png" alt="Question Mark">`,
         answer1: 'Viola',
         answer2: 'Cornet',
         answer3: 'Bass Clarinet',
