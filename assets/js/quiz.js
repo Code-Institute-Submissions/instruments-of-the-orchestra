@@ -94,15 +94,10 @@ answers.forEach(answer => {
 //Play and pause audio
 audioButton.addEventListener('click', () => {
     const instrument = new Audio(`assets/audio/${currentQuestion.audio}`);
-    if (instrument.paused) {
-        audioButton.innerHTML = `<i class="fas fa-pause"></i>`;
-        instrument.play();
-    } else {
-        audioButton.innerHTML = `<i class="fas fa-play-circle"></i>`;
-        instrument.pause();
-    }
+    instrument.play();
 })
 
+//The getQuestions function is called when next button is clicked
 nextButton.addEventListener('click', () => {
     wellDone.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
@@ -120,7 +115,6 @@ function incorrectSound() {
     const incorrect = new Audio('assets/audio/incorrect.mp3');
     incorrect.play();
 }
-
 
 //Quiz Questions
 const questions = [{
