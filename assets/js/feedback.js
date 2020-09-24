@@ -9,11 +9,11 @@ function sendMail(contactForm) {
         .then(
             function (response) {
                 submitBtn.innerHTML = `Thank you for your Feedback! <i class="fas fa-smile"></i>`;
-                console.log('SUCCESS!', response.status, response.text)
+                // console.log('SUCCESS!', response.status, response.text)
             },
             function (error) {
                 submitBtn.innerHTML = `Please Try Again <i class="fas fa-frown"></i>`;
-                console.log('FAILED...', error)
+                // console.log('FAILED...', error)
             }
         );
     return false;
