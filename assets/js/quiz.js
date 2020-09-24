@@ -13,6 +13,8 @@ const tryButton = document.getElementById('try-button');
 const finish = document.getElementById('finish-container');
 const finishButton = document.getElementById('finish-button');
 
+const audioButton = document.getElementById('audio-button');
+
 let availableQuestions = [];
 let currentQuestion = {};
 let questionCounter;
@@ -88,6 +90,19 @@ answers.forEach(answer => {
     })
 })
 
+
+//Play and pause audio
+audioButton.addEventListener('click', () => {
+    const instrument = new Audio(`assets/audio/${currentQuestion.audio}`);
+    if (instrument.paused) {
+        audioButton.innerHTML = `<i class="fas fa-pause"></i>`;
+        instrument.play();
+    } else {
+        audioButton.innerHTML = `<i class="fas fa-play-circle"></i>`;
+        instrument.pause();
+    }
+})
+
 nextButton.addEventListener('click', () => {
     wellDone.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
@@ -106,6 +121,7 @@ function incorrectSound() {
     incorrect.play();
 }
 
+
 //Quiz Questions
 const questions = [{
         //String Instruments
@@ -120,7 +136,8 @@ const questions = [{
         <p>It's the Violin!</p>
         <p>The Violin is a member of The String Family.</p>
         <p>It has four strings which can be plucked or bowed by the player to make a sound.</p>
-        <p>It is also the smallest and highest sounding instrument in The String Family.</p>`
+        <p>It is also the smallest and highest sounding instrument in The String Family.</p>`,
+        audio: 'violin.mp3'
     },
     {
         //2
@@ -134,7 +151,8 @@ const questions = [{
         <p>It's the Harp!</p>
         <p>The Harp is a member of The String Family.</p>
         <p>It is one of the largest string instruments in an orchestra and has over 40 strings.</p>
-        <p>The player plucks or strums the strings to make a sound.</p>`
+        <p>The player plucks or strums the strings to make a sound.</p>`,
+        audio: 'harp.mp3' //Not Working?
     },
     {
         //3
@@ -148,7 +166,8 @@ const questions = [{
         <p>It's the Double Bass!</p>
         <p>The Double Bass is a member of The String Family.</p>
         <p> It is one of the largest string instruments in an orchestra and it has four strings which can be plucked or bowed by the player to make a sound.</p>
-        <p>The Double Bass is also often used in jazz and swing bands.</p>`
+        <p>The Double Bass is also often used in jazz and swing bands.</p>`,
+        audio: 'double-bass.mp3'
     },
     {
         //4
@@ -161,7 +180,8 @@ const questions = [{
         message: `<img class="quiz-img" src="assets/images/cello-player.jpg" alt="Someone Playing the Cello">
         <p>The Cello is a member of The String Family!</p>
         <p>Other members of The String Family include the Violin, the Viola, the Double Bass and the Harp.</p>
-        <p>The Cello has four strings which can be plucked or bowed by the player to make a sound.</p>`
+        <p>The Cello has four strings which can be plucked or bowed by the player to make a sound.</p>`,
+        audio: 'cello.mp3'
     },
     {
         //Woodwind Instruments
