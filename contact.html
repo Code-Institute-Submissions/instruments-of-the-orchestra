@@ -40,14 +40,14 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <h2>What is an Orchestra?</h2>
+                        <h2 class="heading-font">What is an Orchestra?</h2>
                         <img class="quiz-img" src="assets/images/orchestra.jpg" alt="Orchestra">
                         <p>
                             An orchestra is a large group of musicians who play instruments together to make music.
                         </p>
                         <p>
-                            They play a lot of classical music as well music used in films, television shows and video
-                            games!
+                            An orchestra typically plays a lot of classical music as well music used in films,
+                            television shows and video games!
                         </p>
                         <p>
                             The instruments in an orchestra are organised into four different families:
@@ -61,21 +61,24 @@
                         <img class="music-icon" src="assets/images/icons/timpani-icon.png" alt="Timpani">
                         <p class="bold-text">The Percussion Family</p>
                         <p>
-                            An orchestra can have between 30 and 100 musicians playing on stage at the same time -
-                            that’s a lot of musicians!
+                            An orchestra can have between 30 and 100 musicians playing on stage at the same time
+                            <br>...that’s a lot of musicians!
                         </p>
                         <p>
                             So how do all the musicians play together?
                         </p>
                         <img class="music-icon" src="assets/images/icons/conductor-icon.png"
                             alt="Orchestra Conductor Baton">
-                        <p>They are lead by <span class="bold-text">‘The Conductor’</span>.</p>
+                        <p>
+                            They are lead by<br><span class="bold-text">‘The Conductor’</span>.
+                        </p>
                         <p>
                             It is the conductors job to tell the musicians when to start and stop playing, how fast or
                             slow to play, and how loud or quiet to play.
                         </p>
-                        <button type="button" class="button pink-button" data-dismiss="modal">Close <i
-                                class="fas fa-times"></i></button>
+                        <button type="button" class="button pink-button" data-dismiss="modal">
+                            Close <i class="fas fa-times"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -85,36 +88,37 @@
     <!-- Form Content -->
     <section class="content-center">
         <div class="card content-container contact-form">
-            <h2>Thank you for taking the Instruments of the Orchestra Quiz</h2>
-            <p>
-                I hope you enjoyed this quiz and learning about the instruments in an orchestra.
-            </p>
-            <p>
-                If there is anything you think could be improved or added to the quiz, please fill out the form below.
-            </p>
-            <p>
-                I look forward to hearing from you!
-            </p>
+            <h1 class="heading-font">Thank you for taking the Instruments of the Orchestra Quiz</h2>
+                <p>
+                    I hope you enjoyed this quiz and learning about the instruments in an orchestra.
+                </p>
+                <p>
+                    If there is anything you think could be improved or added to the quiz, please fill out the form
+                    below.
+                </p>
+                <p>
+                    I look forward to hearing from you!
+                </p>
 
-            <form id="feedback-form" onsubmit="return sendMail(this)">
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" class="form-control" name="full_name" id="name"
-                        placeholder="Enter Your Full Name" required />
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" class="form-control" name="email_address" id="email"
-                        placeholder="Enter Your Email Address" required />
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea class="form-control" name="message" id="message" placeholder="Enter Your Message Here"
-                        required></textarea>
-                </div>
-                <button id="submit-btn" type="submit" class="button pink-button">Submit Feedback <i
-                        class="fas fa-paper-plane"></i></button>
-            </form>
+                <form id="feedback-form" onsubmit="return sendMail(this)">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" class="form-control" name="full_name" id="name"
+                            placeholder="Enter Your Full Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" class="form-control" name="email_address" id="email"
+                            placeholder="Enter Your Email Address" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" name="message" id="message" placeholder="Enter Your Message Here"
+                            required></textarea>
+                    </div>
+                    <button id="submit-btn" type="submit" class="button pink-button">Submit Feedback <i
+                            class="fas fa-paper-plane"></i></button>
+                </form>
         </div>
     </section>
 
