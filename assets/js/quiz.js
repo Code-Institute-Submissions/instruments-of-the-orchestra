@@ -13,7 +13,9 @@ const tryButton = document.getElementById('try-button');
 const finish = document.getElementById('finish-container');
 const finishButton = document.getElementById('finish-button');
 
-const audioButton = document.getElementById('audio-button');
+const audioSrc = document.getElementById('audio');
+const audioPlay = document.getElementById('audio-play');
+const audioPause = document.getElementById('audio-pause');
 
 let availableQuestions = [];
 let currentQuestion = {};
@@ -60,6 +62,8 @@ function getQuestions() {
         answer.innerText = currentQuestion['answer' + number]; //Sets innerText of answer buttons
     })
 
+    audioSrc.setAttribute('src', `assets/audio/${currentQuestion.audio}`);
+
     availableQuestions.splice(questionIndex, 1); //Removes answered question from quiz
 }
 
@@ -90,17 +94,20 @@ answers.forEach(answer => {
     })
 })
 
+//Play and pause audio buttons
+audioPlay.addEventListener('click', () => {
+    audioSrc.play();
+})
 
-//Play and pause audio
-audioButton.addEventListener('click', () => {
-    const instrument = new Audio(`assets/audio/${currentQuestion.audio}`);
-    instrument.play();
+audioPause.addEventListener('click', () => {
+    audioSrc.pause();
 })
 
 //The getQuestions function is called when next button is clicked
 nextButton.addEventListener('click', () => {
     wellDone.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
+    audioSrc.pause();
     getQuestions();
 })
 
