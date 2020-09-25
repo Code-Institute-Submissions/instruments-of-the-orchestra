@@ -146,13 +146,29 @@ h2 {
     border: none;
 }
 
-#audio-button {
-    font-size: 2.5rem;
-    padding: 0;
-}
-
 .button:focus {
     outline: none;
+}
+
+.audio-buttons {
+    display: flex;
+}
+
+#audio-play,
+#audio-pause {
+    flex-direction: row;
+    width: 50%;
+    font-size: 2rem;
+}
+
+#audio-play {
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+#audio-pause {
+    margin-left: 10px;
+    margin-top: 20px;
 }
 
 #answer-a {
@@ -165,7 +181,8 @@ h2 {
     box-shadow: 0 5px var(--dark-orange);
 }
 
-#answer-c {
+#answer-c,
+#audio-play {
     background-color: var(--green);
     box-shadow: 0 5px var(--dark-green);
 }
@@ -175,15 +192,13 @@ h2 {
     box-shadow: 0 5px var(--dark-blue);
 }
 
-#audio-button,
-.orchestra-button {
-    margin: 0 0 20px;
+.orchestra-button,
+#audio-pause {
     background-color: var(--yellow);
     box-shadow: 0 5px var(--dark-yellow);
 }
 
 .pink-button {
-    margin-top: 10px;
     background-color: var(--pink);
     box-shadow: 0 5px var(--dark-pink);
 }
@@ -204,7 +219,8 @@ to add a simple button animation */
     background-color: var(--dark-orange);
 }
 
-#answer-c:hover {
+#answer-c:hover,
+#audio-play:hover {
     background-color: var(--dark-green);
 }
 
@@ -212,8 +228,8 @@ to add a simple button animation */
     background-color: var(--dark-blue);
 }
 
-#audio-button:hover,
-.orchestra-button:hover {
+.orchestra-button:hover,
+#audio-pause:hover {
     background-color: var(--dark-yellow);
 }
 
