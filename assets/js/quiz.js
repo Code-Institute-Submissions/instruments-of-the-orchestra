@@ -21,7 +21,7 @@ let availableQuestions = [];
 let currentQuestion = {};
 let questionCounter;
 
-const maxQuestions = 3;
+const maxQuestions = 15;
 
 //Code below is based on James Q Quick's Build a Quiz App part 3 - https://www.youtube.com/watch?v=zZdQGs62cR8&t=13s
 
@@ -160,7 +160,7 @@ const questions = [{
         <p>The Harp is a member of The String Family.</p>
         <p>It is one of the largest string instruments in an orchestra and has over 40 strings.</p>
         <p>The player plucks or strums the strings to make a sound.</p>`,
-        audio: 'harp.mp3' //Not Working?
+        audio: 'harp.mp3'
     },
     {
         //3
@@ -204,7 +204,8 @@ const questions = [{
         <p>It's the Flute!</p>
         <p>The Flute is a member of The Woodwind Family.</p>
         <p>Even though it is a woodwind instrument, it is made of metal rather than wood.</p>
-        <p>The player makes a sound by blowing over the top of the mouthpiece and pressing the keys to produce different notes.</p>`
+        <p>The player makes a sound by blowing over the top of the mouthpiece and pressing the keys to produce different notes.</p>`,
+        audio: 'flute.mp3'
     },
     {
         //6
@@ -218,7 +219,8 @@ const questions = [{
         <p>It's the Oboe!</p>
         <p>The Oboe is a member of The Woodwind Family.</p>
         <p>The Oboe is a double reed instrument. This means it is played with two reeds instead of one reed.</p>
-        <p>It is also often confused with the Clarinet as the two instruments look very similar.</p>`
+        <p>It is also often confused with the Clarinet as the two instruments look very similar.</p>`,
+        audio: 'oboe.mp3'
     },
     {
         //7
@@ -232,7 +234,8 @@ const questions = [{
         <p>It's the Bassoon!</p>
         <p>The Bassoon is a member of The Woodwind Family.</p>
         <p>The Bassoon is a double reed instrument. This means it is played with two reeds instead of one reed.</p>
-        <p>It is also one of the lowest sounding woodwind instruments and when unfolded it is 8 feet in length.</p>`
+        <p>It is also one of the lowest sounding woodwind instruments and when unfolded it is 8 feet in length.</p>`,
+        audio: 'bassoon.mp3'
     },
     {
         //8
@@ -246,7 +249,8 @@ const questions = [{
         <p>The Clarinet is a member of The Woodwind Family!</p>
         <p>Other members of The Woodwind Family include the Flute, the Oboe and the Bassoon.</p>
         <p> Unlike the Bassoon and the Oboe, the Clarinet is a single reed instrument.</p>
-        <p>The player makes a sound by blowing into the mouthpiece and pressing the keys to produce different notes.</p>`
+        <p>The player makes a sound by blowing into the mouthpiece and pressing the keys to produce different notes.</p>`,
+        audio: 'clarinet.mp3'
     },
     {
         //Brass Instruments
@@ -262,7 +266,8 @@ const questions = [{
         <p>The Trumpet is a member of The Brass Family.</p>
         <p>The player makes a sound by “buzzing” into the mouthpiece and pressing the valves to produce different notes.</p>
         <p>As well as being used in the orchestra, the Trumpet is also often used in jazz bands.</p>
-        <p>It is also thought to be more than 3,500 years old, making it the oldest brass instrument.</p>`
+        <p>It is also thought to be more than 3,500 years old, making it the oldest brass instrument.</p>`,
+        audio: 'trumpet.mp3'
     },
     {
         //10
@@ -276,7 +281,8 @@ const questions = [{
         <p>It's the French Horn!</p>
         <p>The French Horn is a member of The Brass Family.</p>
         <p>The player makes a sound by “buzzing” into the mouthpiece and pressing the valves to produce different notes.</p>
-        <p>It is also considered to be an important instrument in the orchestra and can play a wide range of notes.</p>`
+        <p>It is also considered to be an important instrument in the orchestra and can play a wide range of notes.</p>`,
+        audio: 'french-horn.mp3'
     },
     {
         //11
@@ -290,7 +296,8 @@ const questions = [{
         <p>It's the Trombone!</p>
         <p>The Trombone is a member of The Brass Family</p>
         <p>The player makes a sound by“ buzzing” into the mouthpiece but instead of pressing valves to produce different notes, the player pushes and pulls the slide on the instrument.</p>
-        <p>As well as being used in the orchestra, the Trombone is also used in jazz bands and marching bands.</p>`
+        <p>As well as being used in the orchestra, the Trombone is also used in jazz bands and marching bands.</p>`,
+        audio: 'trombone.mp3'
     },
     {
         //12
@@ -304,7 +311,8 @@ const questions = [{
         <p>Its the Tuba!</p>
         <p>The Tuba is a member of The Brass Family.</p>
         <p>The player makes a sound by “buzzing” into the mouthpiece and pressing valves to produce different notes.</p>
-        <p>It is the largest and lowest sounding instrument in The Brass Family.</p>`
+        <p>It is the largest and lowest sounding instrument in The Brass Family.</p>`,
+        audio: 'tuba.mp3'
     },
     {
         //Percussion Instruments
@@ -319,7 +327,8 @@ const questions = [{
         <p>It's the Snare Drum!</p>
         <p>The Snare Drum is a member of The Percussion Family.</p>
         <p>It is usually played with drum sticks, but other sticks such as brushes are sometimes used to create different sound effects.</p>
-        <p>As well as being used in the orchestra, the Snare Drum is also used in marching bands and is one of the drums used in a modern drum kit.</p>`
+        <p>As well as being used in the orchestra, the Snare Drum is also used in marching bands and is one of the drums used in a modern drum kit.</p>`,
+        audio: 'snare-drum.mp3'
     },
     {
         //14
@@ -333,7 +342,8 @@ const questions = [{
         <p>It's the Timpani!</p>
         <p>The Timpani are a member of The Percussion Family.</p>
         <p>They are also known as Kettle Drums.</p>
-        <p>Unlike most drums, they can be tuned to produce different notes.</p>`
+        <p>Unlike most drums, they can be tuned to produce different notes.</p>`,
+        audio: 'timpani.mp3'
     },
     {
         //15
@@ -346,7 +356,8 @@ const questions = [{
         message: `<img class="quiz-img" src="assets/images/xylophone.jpg" alt="Xylophone">
         <p>It's the Xylophone!</p>
         <p>Th Xylophone is a member of The Percussion Family.</p>
-        <p>It is a large instrument made up of wooden bars and each of these bars produces a different note when hit with a stick.</p>`
+        <p>It is a large instrument made up of wooden bars and each of these bars produces a different note when hit with a stick.</p>`,
+        audio: 'xylophone.mp3'
     },
     {
         //16
@@ -360,7 +371,8 @@ const questions = [{
         <p>The Cymbals are a member of The Percussion Family!</p>
         <p>The Cymbals are large metal discs that can be played in different ways.</p>
         <p>They are often used in marching bands were the player will hold the Cymbals using straps, and crash them together to make a sound.</p>
-        <p>They are also a big feature on a drum kit and can be played using a range of different sticks to make different sounds.</p>`
+        <p>They are also a big feature on a drum kit and can be played using a range of different sticks to make different sounds.</p>`,
+        audio: 'cymbals.mp3'
     },
     {
         //Additional Questions
@@ -375,7 +387,8 @@ const questions = [{
         <p>It's the Piano!</p>
         <p>The Piano has the widest range of notes out of all the instruments.</p>
         <p>Most Pianos have 88 keys. These keys are pressed by the player to make a sound.</p>
-        <p>As well as being used in the orchestra, the Piano is also used in a wide range of different bands including jazz bands and most modern pop bands.</p>`
+        <p>As well as being used in the orchestra, the Piano is also used in a wide range of different bands including jazz bands and most modern pop bands.</p>`,
+        audio: 'piano.mp3'
     },
     {
         //18
@@ -390,6 +403,7 @@ const questions = [{
         <p>The Guitar is a member of The String Family.</p>
         <p>The player plucks or strums the strings to make a sound.</p>
         <p>The two most common types of guitar are Acoustic Guitars and Electric Guitars.</p>
-        <p>Most Guitars are made or wood and have 6 strings, but some can have up to twelve strings.</p>`
+        <p>Most Guitars are made or wood and have 6 strings, but some can have up to twelve strings.</p>`,
+        audio: 'guitar.mp3'
     }
 ]
