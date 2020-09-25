@@ -247,6 +247,10 @@ Images
 
 As the site is for educational purposes, I used images from a variety of sites as it was difficult to find all the images needed for the quiz on free image sites.
 
+Resized images for style consistency using Pixelmator OS
+
+Compressed images using [TinyJPG](https://tinyjpg.com/) and [TinyPNG](https://tinypng.com/)
+
 [Orchestra Vector](https://www.freepik.com/vectors/music)
 
 [About Modal Icons and Guessing/Thinking Icon](https://www.flaticon.com/authors/freepik)
