@@ -45,6 +45,7 @@ function getQuestions() {
         finish.classList.remove('hide-content');
         wellDone.classList.add('hide-content');
         quizContainer.classList.add('hide-content');
+        finishSound();
     }
 
     questionCounter++;
@@ -121,6 +122,12 @@ function correctSound() {
 function incorrectSound() {
     const incorrect = new Audio('assets/audio/incorrect.mp3');
     incorrect.play();
+}
+
+//Plays finish sound when clicked
+function finishSound() {
+    const finish = new Audio('assets/audio/yay.mp3');
+    finish.play();
 }
 
 //Quiz Questions
