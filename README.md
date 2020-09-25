@@ -240,8 +240,12 @@ git clone
 
 Sound
 
+All sounds are from [Free Sound](https://freesound.org/)
+
 [Correct Sound](https://freesound.org/people/Bertrof/sounds/351566/)
 [Incorrect Sound](https://freesound.org/people/Bertrof/sounds/351565/)
+
+Compressed audio files using [Online Converter](https://www.onlineconverter.com/compress-mp3)
 
 Images
 
