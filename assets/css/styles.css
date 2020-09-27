@@ -63,15 +63,15 @@ h2 {
 }
 
 h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 10px 0 0;
     color: var(--navy)
 }
@@ -82,7 +82,7 @@ p {
 /* ---------- Navigation Icons ---------- */
 .nav-icon {
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     padding: 25px;
 }
 
@@ -123,6 +123,7 @@ p {
 
 .span-text {
     text-transform: uppercase;
+    font-weight: 700;
     color: var(--dark-navy);
 }
 
@@ -147,7 +148,7 @@ p {
     height: 4rem;
     margin-top: 20px;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 700;
     border-radius: 10px;
     border: none;
@@ -286,7 +287,7 @@ to add a simple button animation */
 
 .site-owner p {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 /* ---------- End Footer ---------- */
@@ -295,20 +296,17 @@ to add a simple button animation */
 /* For devices bigger than mobile screen size 425px */
 @media only screen and (min-width: 426px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     h2,
     .nav-icon {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
-    p {
-        font-size: 1rem;
-    }
-
+    p,
     .button {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .quiz-img {
@@ -323,15 +321,16 @@ to add a simple button animation */
 /* For devices bigger than tablet screen size 768px */
 @media only screen and (min-width: 769px) {
     h1 {
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 2.2rem;
+        font-size: 2.6rem;
     }
 
-    p {
-        font-size: 1.2rem;
+    p,
+    .button {
+        font-size: 1.4rem;
     }
 
     .content-container {
@@ -343,10 +342,6 @@ to add a simple button animation */
     .quiz-img {
         max-width: 60%;
         ;
-    }
-
-    .button {
-        font-size: 1.2rem;
     }
 }
 
