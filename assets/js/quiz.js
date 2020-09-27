@@ -48,15 +48,21 @@ function getQuestions() {
         finishSound();
     }
 
+    //Changes nextButton text to Finish Quiz
+    if (questionCounter === maxQuestions - 1) {
+        nextButton.innerText = 'Finish Quiz';
+    } else {
+        nextButton.innerHTML = 'Next Question <i class="fas fa-arrow-right"></i>'
+    }
+
     questionCounter++;
-    console.log(questionCounter + " questionCounter");
+    //Displays question count in quiz
+    document.getElementById('question-counter').innerHTML = `Question: ${questionCounter}/${maxQuestions}`;
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length); //Random question index number
-    // console.log(questionIndex + " questionIndex");
 
     currentQuestion = availableQuestions[questionIndex]; //Sets random question
     question.innerHTML = currentQuestion.question; //Sets innerHTML of the quiz question
-    // console.log(currentQuestion);
 
     answers.forEach(answer => {
         const number = answer.dataset['number'];

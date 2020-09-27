@@ -140,6 +140,12 @@ p {
     border-radius: 10px;
 }
 
+#question-counter {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Grandstander', sans-serif;
+}
+
 /* ---------- End Content Container ---------- */
 
 /* ---------- Buttons ---------- */
