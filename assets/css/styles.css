@@ -138,6 +138,7 @@ p {
 .quiz-img,
 .quiz-img-portrait {
     border-radius: 10px;
+    margin: 5px;
 }
 
 #question-counter {
@@ -264,7 +265,7 @@ to add a simple button animation */
 }
 
 .form-group label {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-top: 20px;
 }
 
@@ -311,7 +312,8 @@ to add a simple button animation */
     }
 
     p,
-    .button {
+    .button,
+    .form-group label {
         font-size: 1.2rem;
     }
 
@@ -321,6 +323,10 @@ to add a simple button animation */
 
     .quiz-img-portrait {
         max-width: 25%;
+    }
+
+    ::placeholder {
+        font-size: 1rem;
     }
 }
 
@@ -335,7 +341,8 @@ to add a simple button animation */
     }
 
     p,
-    .button {
+    .button,
+    .form-group label {
         font-size: 1.4rem;
     }
 
@@ -348,6 +355,10 @@ to add a simple button animation */
     .quiz-img {
         max-width: 60%;
         ;
+    }
+
+    ::placeholder {
+        font-size: 1.2rem;
     }
 }
 
