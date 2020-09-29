@@ -35,12 +35,13 @@ function startQuiz() {
     welcomeContainer.classList.add('hide-content');
     quizContainer.classList.remove('hide-content');
     availableQuestions = [...questions]; //Spread operator
-    questionCounter = 0;
+    questionCounter = 0; //Sets the question number
     getQuestions();
 }
 
 //The getQuestions function will display the questions in a random order
 function getQuestions() {
+    //Finish message is displayed when quiz is complete
     if (availableQuestions.length === 0 || questionCounter === maxQuestions) {
         finish.classList.remove('hide-content');
         wellDone.classList.add('hide-content');
@@ -130,7 +131,7 @@ function incorrectSound() {
     incorrect.play();
 }
 
-//Plays finish sound when clicked
+//Plays finish sound when called
 function finishSound() {
     const finish = new Audio('assets/audio/yay.mp3');
     finish.play();

@@ -183,11 +183,11 @@ p {
 }
 
 #audio-play {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 #audio-pause {
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 #answer-a {
@@ -344,6 +344,11 @@ to add a simple button animation */
     .button,
     .form-group label {
         font-size: 1.4rem;
+    }
+
+    .button {
+        height: 5rem;
+        margin-top: 30px;
     }
 
     .content-container {

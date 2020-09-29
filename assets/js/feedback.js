@@ -1,3 +1,4 @@
+//Code below is based on the code used in the mini project from the Interactive Frontend Development module
 const submitBtn = document.getElementById('submit-btn');
 
 function sendMail(contactForm) {
@@ -9,11 +10,9 @@ function sendMail(contactForm) {
         .then(
             function (response) {
                 submitBtn.innerHTML = `Thank you for your Feedback! <i class="fas fa-smile"></i>`;
-                // console.log('SUCCESS!', response.status, response.text)
             },
             function (error) {
                 submitBtn.innerHTML = `Please Try Again <i class="fas fa-frown"></i>`;
-                // console.log('FAILED...', error)
             }
         );
     return false;
