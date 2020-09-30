@@ -53,7 +53,7 @@ function getQuestions() {
     if (questionCounter === maxQuestions - 1) {
         nextButton.innerText = 'Finish Quiz';
     } else {
-        nextButton.innerHTML = 'Next Question <i class="fas fa-arrow-right"></i>'
+        nextButton.innerHTML = 'Next Question <i class="fas fa-arrow-right"></i>';
     }
 
     questionCounter++;
@@ -68,7 +68,7 @@ function getQuestions() {
     answers.forEach(answer => {
         const number = answer.dataset['number'];
         answer.innerText = currentQuestion['answer' + number]; //Sets innerText of answer buttons
-    })
+    });
 
     audioSrc.setAttribute('src', `assets/audio/${currentQuestion.audio}`);
 
@@ -93,23 +93,22 @@ answers.forEach(answer => {
             incorrectSound();
             tryAgain.classList.remove('hide-content');
             quizContainer.classList.add('hide-content');
-
             tryButton.addEventListener('click', () => {
                 tryAgain.classList.add('hide-content');
                 quizContainer.classList.remove('hide-content');
-            })
+            });
         }
-    })
-})
+    });
+});
 
 //Play and pause audio buttons
 audioPlay.addEventListener('click', () => {
     audioSrc.play();
-})
+});
 
 audioPause.addEventListener('click', () => {
     audioSrc.pause();
-})
+});
 
 //The getQuestions function is called when next button is clicked
 nextButton.addEventListener('click', () => {
@@ -117,7 +116,7 @@ nextButton.addEventListener('click', () => {
     quizContainer.classList.remove('hide-content');
     audioSrc.pause();
     getQuestions();
-})
+});
 
 //Plays correct sound when called
 function correctSound() {
@@ -180,8 +179,8 @@ const questions = [{
         message: `<img class="quiz-img" src="assets/images/double-bass-player.jpg" alt="Someone Playing Double Bass">
         <p>It's the Double Bass!</p>
         <p>The Double Bass is a member of The String Family.</p>
-        <p> It is one of the largest string instruments in an orchestra and it has four strings which can be plucked or bowed by the player to make a sound.</p>
-        <p>The Double Bass is also often used in jazz and swing bands.</p>`,
+        <p>It is one of the largest string instruments in an orchestra and it has four strings which can be plucked or bowed by the player to make a sound.</p>
+        <p>The Double Bass is also often used in jazz and swing music.</p>`,
         audio: 'double-bass.mp3'
     },
     {
@@ -241,7 +240,7 @@ const questions = [{
         <p>It's the Bassoon!</p>
         <p>The Bassoon is a member of The Woodwind Family.</p>
         <p>The Bassoon is a double reed instrument. This means it is played with two reeds instead of one reed.</p>
-        <p>It is also one of the lowest sounding woodwind instruments and when unfolded it is 8 feet in length.</p>`,
+        <p>It is also one of the lowest sounding woodwind instruments and if "unfolded" it is 8 feet in length.</p>`,
         audio: 'bassoon.mp3'
     },
     {
@@ -272,8 +271,8 @@ const questions = [{
         <p>It's the Trumpet!</p>
         <p>The Trumpet is a member of The Brass Family.</p>
         <p>The player makes a sound by “buzzing” into the mouthpiece and pressing the valves to produce different notes.</p>
-        <p>As well as being used in the orchestra, the Trumpet is also often used in jazz bands.</p>
-        <p>It is also thought to be more than 3,500 years old, making it the oldest brass instrument.</p>`,
+        <p>As well as being used in the orchestra, the Trumpet is also often used in jazz music.</p>
+        <p>It is also thought to be more than 3,500 years old.</p>`,
         audio: 'trumpet.mp3'
     },
     {
@@ -288,7 +287,7 @@ const questions = [{
         <p>It's the French Horn!</p>
         <p>The French Horn is a member of The Brass Family.</p>
         <p>The player makes a sound by “buzzing” into the mouthpiece and pressing the valves to produce different notes.</p>
-        <p>It is also considered to be an important instrument in the orchestra and can play a wide range of notes.</p>`,
+        <p>It is thought to be an important instrument in the orchestra and can play a wide range of notes.</p>`,
         audio: 'french-horn.mp3'
     },
     {
@@ -303,7 +302,7 @@ const questions = [{
         <p>It's the Trombone!</p>
         <p>The Trombone is a member of The Brass Family</p>
         <p>The player makes a sound by“ buzzing” into the mouthpiece but instead of pressing valves to produce different notes, the player pushes and pulls the slide on the instrument.</p>
-        <p>As well as being used in the orchestra, the Trombone is also used in jazz bands and marching bands.</p>`,
+        <p>As well as being used in the orchestra, the Trombone is also used in jazz music and marching bands.</p>`,
         audio: 'trombone.mp3'
     },
     {
@@ -413,4 +412,4 @@ const questions = [{
         <p>Most Guitars are made or wood and have 6 strings, but some can have up to twelve strings.</p>`,
         audio: 'guitar.mp3'
     }
-]
+];
