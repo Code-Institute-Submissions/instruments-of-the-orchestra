@@ -37,7 +37,7 @@
 
     <!-- About Modal -->
     <section>
-        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -107,9 +107,9 @@
                 <p>
                     When you’re ready, press the <span class="span-text">Start Quiz</span><br>button to start the quiz.
                 </p>
-                <a data-toggle="modal" data-target="#aboutModal" href="#">
-                    <button class="button orchestra-button">What is an Orchestra?</button>
-                </a>
+                <button class="button orchestra-button" data-toggle="modal" data-target="#aboutModal">
+                    What is an Orchestra?
+                </button>
                 <button id="start-quiz" class="button pink-button"><i class="fas fa-music"></i> Start Quiz</button>
             </div>
             <!-- Quiz Content -->
@@ -141,7 +141,7 @@
                 <div id="message"></div>
                 <p>Use the buttons below to hear what sound this instrument makes!</p>
                 <div class="audio-buttons">
-                    <audio id="audio" src=" " type="audio/mp3"></audio>
+                    <audio id="audio" src="#"></audio>
                     <button id="audio-play" class="button"><i class="fas fa-play-circle"></i></button>
                     <button id="audio-pause" class="button"><i class="fas fa-pause-circle"></i></button>
                 </div>
