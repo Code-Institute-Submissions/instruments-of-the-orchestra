@@ -75,7 +75,7 @@ As this project is aimed at school children, I wanted to create a fun and colorf
 The layout of the site is simple and easy to follow with navigation buttons at the top, the main content in the middle and social/contact buttons in the footer. The overall site is made up of two pages:
 
 - index.html - This includes the welcome message and all the quiz content
-- contact.html - This
+- contact.html - This includes the feedback form
 
 #### Colour Scheme
 
@@ -123,7 +123,8 @@ Links to the wireframes can be found below:
 
 - Responsive on all devices.
 - Easy to use navigation bar located at the top of every page with links to the home page and the about modal.
-- A footer located on every page with links to relevant social media pages and the feedback form.
+
+- A footer located on every page with links to my LinkedIn profile, GitHub profile and a feedback form.
 - A feedback form to allow the user to provide feedback on the quiz and/or contact the site owner.
 
 - Quiz - Started following layout in Web Dev video but struggled to run a conditional on answers | Changed looping method to Fisher-Yates - considered to be more reliable | Changed method again to follow James Quick video on Building a JavaScript Quiz App
@@ -182,31 +183,50 @@ Links to the wireframes can be found below:
 The W3C Markup Validator and the W3C CSS Validator were used to validate the html and css files in the project and to ensure there were no syntax errors. The following shows the results for each file:
 
 - [W3C Markup Validator](https://validator.w3.org/)
-  - index.html - Input Results Later
-  - contact.html - Input Results Later
+  - index.html - No errors or warnings to show.
+  - contact.html - Nor errors or warnings to show.
+
+Upon running both html files through the validator for the first time, warnings were displayed for the use of "type" in the script tags. After removing these, both html files passed through the validator without any errors or warnings.
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-  - styles.css - Input Results Later
+  - styles.css - No error found.
+  - The validator did display a warning for the use of the root colour variable names.
 
-JS Lint was used to check the javascript files in the project to ensure it complies with coding rules and that these were no syntax errors:
+![Valid CSS](http://jigsaw.w3.org/css-validator/images/vcss-blue)
 
-- [JS Lint](https://jslint.com/)
-  - quiz.js - Input Results Later
-  - feedback.js - Input Results Later
+JS Hint was used to check the javascript files in the project to ensure it complies with coding rules and that these were no syntax errors:
+
+- [JS Hint](https://jshint.com/)
+  - quiz.js - No warnings to show.
+  - feedback.js - Found one undefined variable (emailjs) and one unused variable (sendMail).
+
+Upon running both JavaScript files through JS Hint, there were a number of warnings for missing semicolons. There were also two warnings for the use of single quotes when calling the number dataset in quiz.js. After adding the relevant semicolons and replacing the single quotes with template literals, this fixed this issues in quiz.js and feedback.js.
 
 ### Testing User Stories from UX Section
 
 As a **user**, I want to easily understand the main purpose of the site on my first visit
 
+- I've added a
+
 As a **user**, I want to be able to easily navigate through the site
+
+- I've
 
 As a **user**, I want to learn about the different instruments used in an orchestra
 
+- I've
+
 As a **user**, I want to have a fun playing the quiz and also have fun learning
+
+- I've
 
 As a **user**, I want to be able to easily contact the site owner to provide feedback about the quiz
 
+- I've
+
 As a **user**, I want to see what other projects the site owner has worked on
+
+- I've
 
 ### Further Testing
 
