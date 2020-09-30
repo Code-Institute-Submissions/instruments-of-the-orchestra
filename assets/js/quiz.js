@@ -66,8 +66,8 @@ function getQuestions() {
     question.innerHTML = currentQuestion.question; //Sets innerHTML of the quiz question
 
     answers.forEach(answer => {
-        const number = answer.dataset['number'];
-        answer.innerText = currentQuestion['answer' + number]; //Sets innerText of answer buttons
+        const number = answer.dataset[`number`];
+        answer.innerText = currentQuestion[`answer${number}`]; //Sets innerText of answer buttons
     });
 
     audioSrc.setAttribute('src', `assets/audio/${currentQuestion.audio}`);
@@ -79,7 +79,7 @@ function getQuestions() {
 answers.forEach(answer => {
     answer.addEventListener('click', e => {
         const selectedButton = e.target;
-        const selectedAnswer = selectedButton.dataset['number'];
+        const selectedAnswer = selectedButton.dataset[`number`];
 
         if (selectedAnswer === currentQuestion.correct) {
             //Well Done message is displayed and correct sound is played
