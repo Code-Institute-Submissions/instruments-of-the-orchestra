@@ -2,7 +2,9 @@
 
 Instruments Of The Orchestra is a fun and interactive quiz aimed at school children who have an interest in music or have recently started learning a musical instrument. The aim of the quiz is to teach school children about the different instruments used in an orchestra.
 
-Insert Am I Responsive Image Later
+![Am I Responsive](assets/images/am-i-responsive.jpg)
+
+The image above is a screenshot of the site displayed on different devices using [Am I Responsive](http://ami.responsivedesign.is/).
 
 A demo of the website can be found here: [www.instrumentsoftheorchestra.com](https://kirstchat.github.io/instruments-of-the-orchestra/)
 
@@ -35,6 +37,10 @@ A demo of the website can be found here: [www.instrumentsoftheorchestra.com](htt
 - [**Deployment**](#deployment)
 
 - [**Credits**](#credits)
+  - Code
+  - Content
+  - Media
+  - Acknowledgements
 
 ---
 
@@ -65,6 +71,11 @@ The goal of this project is to create a fun and interactive quiz aimed at school
 ### Design
 
 As this project is aimed at school children, I wanted to create a fun and colorful design that will engage the user and keep them interested throughout.
+
+The layout of the site is simple and easy to follow with navigation buttons at the top, the main content in the middle and social/contact buttons in the footer. The overall site is made up of two pages:
+
+- index.html - This includes the welcome message and all the quiz content
+- contact.html - This
 
 #### Colour Scheme
 
@@ -123,7 +134,7 @@ Links to the wireframes can be found below:
 
 - Difficulty setting - different number of questions for each setting - Test on a branch
 
-- Add more questions | JSON file or database to update questions list
+- Add more questions
 
 - Learning Section
 
@@ -212,9 +223,9 @@ Insert Images Later
 
 Issue with audio repeating/playing at the same time as other audio clip when button is clicked in initial script - fixed with latest version.
 
-Issue with question count - fixed with changing where getQuestions function was called - new issue with user not being able to try the question again.
+Issue with question count - fixed with changing where getQuestions function was called
 
-Created a branch to update the text content of the answer buttons from the object array in a different way. With the first version where I looped through the array to update the text, I was unable to find a way to see if the button clicked was true or false.
+Created a branch to update the text content of the answer buttons from the object array in a different way. With the first version - I looped through the array to update the text, I was unable to find a way to see if the button clicked was true or false.
 
 [Contents](#contents)
 
@@ -222,12 +233,21 @@ Created a branch to update the text content of the answer buttons from the objec
 
 ## Deployment
 
+This project was coded using VS Code using the following steps from [Visual Studio Code Docs](https://code.visualstudio.com/docs/editor/github):
+
+1. Opened Github and created a new repository.
+2. Opened source control on VS Code and selected "Clone Repository".
+3. When prompted, I signed in to my GitHub account on VS Code.
+4. Searched for the new repository created on GitHub and selected the repository to clone.
+5. After the repository was successfully cloned to my computer, I started creating files and folders.
+6. I then used the command line to commit and push changes to the GitHub repository.
+
 ### GitHub Pages
 
 The project was deployed to GitHub Pages using the following steps:
 
 1. After pushing the project to GitHub, I opened the GitHub site and logged in.
-2. After logging in, I located the repository for the project:
+2. After logging in, I located the repository for the project: [https://github.com/KirstChat/instruments-of-the-orchestra](https://github.com/KirstChat/instruments-of-the-orchestra)
 3. At the top of the repository, I clicked on the "Settings" button.
 4. On the settings page, I scrolled down to the "GitHub Pages" section.
 5. Under "Source", I selected "Master Branch" from the dropdown menu.
@@ -258,7 +278,7 @@ git clone https://github.com/KirstChat/instruments-of-the-orchestra.git
 
 ### Code
 
-The JavaScript code used to create the quiz was based around two tutorials found on YouTube. I originally started basing the code on the [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) video on how to [Build a Quiz App with Javascript](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s) before discovering [James Q Quicks](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw) video on how to [Build a Quiz App (3)](https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=5).
+The JavaScript code used to create the quiz was based around two tutorials found on YouTube. I originally started basing the code on the [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) video on how to [Build a Quiz App with Javascript](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLyn9ak24qaCvBSsurq-Q1fGKEXXUzsJmf&index=2&t=718s) before discovering [James Q Quicks](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw) video on how to [Build a Quiz App (3)](https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=5). This approach worked better for the type of quiz I was aiming to build for this project.
 
 Other tutorials and code examples used in the project:
 
@@ -268,7 +288,7 @@ Other tutorials and code examples used in the project:
 
 - [JavaScript Info: Fisher-Yates Shuffle](https://javascript.info/task/shuffle) - This was initially used to try a different approach to shuffle the questions array before settling on using math functions instead.
 
-- [FreeCodeCamp: Button Loop](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/) - This was initially used to test different ways of looping through buttons to see which worked best for updated the inner text of the buttons.
+- [FreeCodeCamp: Button Loop](https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/) - This was initially used to test different ways of looping through buttons to see which worked best for updating the inner text of the buttons.
 
 ### Content
 
@@ -328,8 +348,8 @@ Other tutorials and code examples used in the project:
 
 ### Acknowledgements
 
-- My Mentor Spencer Barriball...
+- My Mentor Spencer Barriball for all his feedback and advice for this project - you've been awesome!
 
-- I'd like to thank the Code Institute Slack Community for being amazing group of people as always. I'm not usually able to say much in any of the calls but, I always leave the call having learnt something new!
+- I'd like to thank the Code Institute Slack Community for being amazing group of people as always. I'm not usually able to say much in any of the calls but I always leave the call having learnt something new - usually JavaScript related!
 
 [Contents](#contents)
