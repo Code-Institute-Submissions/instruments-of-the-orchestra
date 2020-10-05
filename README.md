@@ -83,7 +83,7 @@ The layout of the site is simple and easy to follow with navigation buttons at t
 
 _Colour palettes generated using [coolors.co](https://coolors.co/f94144-f67584-f8961e-f9c74f-90be6d-43aab1-264653)_
 
-![Colour palette generated using coolors.co](assets/images/colour-palettes/color-palette-light.jpg)
+![Colour palette generated using coolors.co](assets/images/colour-palettes/colour-palette-light.jpg)
 
 I chose a bright colour scheme for the site that features both primary and secondary colours as seen in the image above. I used these colours for all the buttons that the user interacts with throughout the quiz and for various other buttons on the website. The intention of the bright colours is to grab the users attention and encourage them to interact with the website.
 
@@ -234,13 +234,13 @@ As a **user**, I want to be able to easily navigate through the site
 As a **user**, I want to learn about the different instruments used in an orchestra
 
 - I've created a quiz that will teach the user about the different instruments and instrument sections in an orchestra.
-- If the user guesses the answer to a question correctly, they will be provided with some facts about that specific instrument.
-- If the user guesses incorrectly, they will be encourage to try again until they answer the question correctly.
+- If the user guesses the answer to a question correctly, they will be provided with some facts about that specific instrument along with the option to play an audio clip of that instrument.
+- If the user guesses incorrectly, they will be encouraged to try again until they answer the question correctly.
 
 As a **user**, I want feedback as I answer each of the questions in the quiz
 
 - I've added a well done message and a try again message to each question.
-- If the user guesses correctly, they 
+- If the user guesses correctly, they will be provided with some facts about that specific instrument along with the option to play an audio clip of that instrument.
 
 As a **user**, I want to have a fun playing the quiz and also have fun learning
 
@@ -278,9 +278,18 @@ Each page was also tested individually to check that:
 
 Each of the quiz questions were also tested individually to check that:
 
-- 
+- The well done message displayed when the correct answer was selected
+- The try again message displayed when the incorrect answer was selected
+- The correct sound played when the correct answer was selected
+- The incorrect sound played when the incorrect answer was selected
+- The relevant instrument sound played in the well done message
+- The question count was correct throughout the quiz
+- The finish quiz button displayed on the last question in the quiz
+- The finish message displayed when the finish quiz button was selected
 
-The site was also tested and reviewed by my mentor as well as some Code Institute students on the peer-code-review channel.
+Each of the above functions in the quiz were also console logged when being tested to check that that specific function was working properly.
+
+The site was also tested and reviewed by my mentor as well as some Code Institute students on the peer-code-review channel on Slack.
 
 - Quiz - Started following layout in Web Dev video but struggled to run a conditional on answers | Changed looping method to Fisher-Yates - considered to be more reliable | Changed method again to follow James Quick video on Building a JavaScript Quiz App
 - Sound Based Questions and/or sound of each instrument on well done message - Test on a branch
