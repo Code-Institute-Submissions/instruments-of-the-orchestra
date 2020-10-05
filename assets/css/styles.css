@@ -147,6 +147,16 @@ p {
     font-family: 'Grandstander', sans-serif;
 }
 
+.feedback-form {
+    color: var(--dark-blue);
+    text-transform: uppercase;
+}
+
+.feedback-form:hover {
+    color: var(--dark-pink);
+    text-decoration: none;
+}
+
 /* ---------- End Content Container ---------- */
 
 /* ---------- Buttons ---------- */
