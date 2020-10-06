@@ -77,7 +77,7 @@ As this project is aimed at school children, I wanted to create a fun and colorf
 The layout of the site is simple and easy to follow with navigation buttons at the top, the main content in the middle and social/contact buttons in the footer. The overall site is made up of two pages:
 
 - **index.html** - this includes the welcome message and all the quiz content as well the navigation links in the header and footer of the site.
-- **contact.html** - this includes the feedback from as well as the navigation links in the header and the footer of the site.
+- **contact.html** - this includes the feedback form as well as the navigation links in the header and the footer of the site.
 
 #### Colour Scheme
 
@@ -250,7 +250,7 @@ As a **user**, I want to easily understand the main purpose of the site on my fi
 
 ![Welcome Message](assets/images/screenshots/welcome.jpg)
 
-_The image above shows a screenshot of the welcome message the user will see when they first open the site. It also shows the navigation icons used in the header and footer.
+_The image above shows a screenshot of the welcome message the user will see when they first open the site. It also shows the navigation icons used in the header and footer._
 
 As a **user**, I want to be able to easily navigate through the site:
 
@@ -350,6 +350,10 @@ Each of the quiz questions were also tested individually to check that:
 
 Each of the above functions in the quiz were also console logged when being tested to check that that specific function was working properly.
 
+The feedback form was also tested individually to test that EmailJS was working properly. I tested this by entering the relevant details on the form and clicking the submit button at the bottom of the form. After submitting the form, I received an email to my own personal email account stating that I had received "Feedback for Instruments of the Orchestra". The email received can be seen in the screenshot below:
+
+![EmailJS Screenshot](assets/images/screenshots/emailjs.jpg)
+
 The site was also tested and reviewed by my mentor (Spencer Barriball) as well as some Code Institute students on the peer-code-review channel on Slack.
 
 ### Known Bugs
@@ -396,6 +400,9 @@ This project was coded using VS Code using the following steps from [Visual Stud
 4. Searched for the new repository created on GitHub and selected the repository to clone.
 5. After the repository was successfully cloned to my computer, I started creating files and folders.
 6. I then used git bash to commit and push changes to the GitHub repository.
+7. To stage a file for commit, I used ```git add``` and specified which file I wanted to commit.
+8. I used ```git commit -m "add commit message here"``` to specify what changes had been made to the file.
+9. I then used ```git push``` to push all staged changes to the GitHub repository.
 
 ### GitHub Pages
 
@@ -503,7 +510,7 @@ Other tutorials and code examples used in the project:
 
 ### Acknowledgements
 
-- I'd like to thank my Mentor Spencer Barriball for all his feedback and advice for this project - you've been awesome!
+- I'd like to thank my mentor Spencer Barriball for all his feedback and advice for this project - you've been awesome!
 
 - I'd also like to thank the Code Institute Slack Community for being an amazing group of people as always. I'm not usually able to say much in any of the calls but I always leave the call having learnt something new - usually JavaScript related!
 
