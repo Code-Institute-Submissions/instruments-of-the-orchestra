@@ -326,7 +326,7 @@ contact.html
 
 - The performance of this page scored better as there is only one image used on this page. It did however score slightly lower for best practices due to the dimensions of the image being smaller than expected but all other areas scored highly.
 
-![contact.html Lighthoue Scorese](assets/images/screenshots/contact-lighthouse.jpg)
+![contact.html Lighthouse Scores](assets/images/screenshots/contact-lighthouse.jpg)
 
 Each page was also tested individually to check that:
 
